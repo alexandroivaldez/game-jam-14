@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://h1f3o1eiwj5m"]
+[gd_scene load_steps=36 format=3 uid="uid://h1f3o1eiwj5m"]
 
 [ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://Jump (32x32).png" id="1_kmxrt"]
 [ext_resource type="Texture2D" uid="uid://45r5jkbilmwt" path="res://Idle (32x32).png" id="1_thhkl"]
+[ext_resource type="Texture2D" uid="uid://bvh7efw47pwsu" path="res://Double Jump (32x32).png" id="2_8dmud"]
 [ext_resource type="Texture2D" uid="uid://w25hhw540s6m" path="res://Run (32x32).png" id="3_w23iu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tp4bf"]
@@ -47,6 +48,30 @@ region = Rect2(288, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_rivys"]
 atlas = ExtResource("1_thhkl")
 region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxrgj"]
+atlas = ExtResource("2_8dmud")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw6ic"]
+atlas = ExtResource("2_8dmud")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oxw2"]
+atlas = ExtResource("2_8dmud")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3fi8"]
+atlas = ExtResource("2_8dmud")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af85l"]
+atlas = ExtResource("2_8dmud")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eqpi"]
+atlas = ExtResource("2_8dmud")
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2wbk"]
 atlas = ExtResource("3_w23iu")
@@ -138,6 +163,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_hxrgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cw6ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oxw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3fi8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_af85l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eqpi")
+}],
+"loop": true,
+"name": &"doubleJump",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_kmxrt")
 }],
 "loop": true,
@@ -196,8 +244,9 @@ position = Vector2(386, 268)
 texture_filter = 1
 scale = Vector2(2.15625, 2.15625)
 sprite_frames = SubResource("SpriteFrames_js00j")
+animation = &"doubleJump"
 autoplay = "default"
-frame_progress = 0.231202
+frame_progress = 0.798612
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.5)
