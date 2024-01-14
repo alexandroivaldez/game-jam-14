@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvtf73620rohj"]
 
-[ext_resource type="Texture2D" uid="uid://cublbod6gpxyh" path="res://water-box.png" id="1_2ydwd"]
+[ext_resource type="Texture2D" uid="uid://cublbod6gpxyh" path="res://assets/water-box.png" id="1_2ydwd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ymr0v"]
 animations = [{

@@ -1,9 +1,9 @@
 [gd_scene load_steps=36 format=3 uid="uid://h1f3o1eiwj5m"]
 
-[ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://Jump (32x32).png" id="1_kmxrt"]
-[ext_resource type="Texture2D" uid="uid://45r5jkbilmwt" path="res://Idle (32x32).png" id="1_thhkl"]
-[ext_resource type="Texture2D" uid="uid://bvh7efw47pwsu" path="res://Double Jump (32x32).png" id="2_8dmud"]
-[ext_resource type="Texture2D" uid="uid://w25hhw540s6m" path="res://Run (32x32).png" id="3_w23iu"]
+[ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://assets/main-character/Jump (32x32).png" id="1_kmxrt"]
+[ext_resource type="Texture2D" uid="uid://45r5jkbilmwt" path="res://assets/main-character/Idle (32x32).png" id="1_thhkl"]
+[ext_resource type="Texture2D" uid="uid://bvh7efw47pwsu" path="res://assets/main-character/Double Jump (32x32).png" id="2_8dmud"]
+[ext_resource type="Texture2D" uid="uid://w25hhw540s6m" path="res://assets/main-character/Run (32x32).png" id="3_w23iu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tp4bf"]
 atlas = ExtResource("1_thhkl")
