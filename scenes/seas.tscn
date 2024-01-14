@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c01n3sb7b3ibi"]
+[gd_scene load_steps=5 format=3 uid="uid://c01n3sb7b3ibi"]
 
 [ext_resource type="Texture2D" uid="uid://cublbod6gpxyh" path="res://water-box.png" id="1_6wjcj"]
 [ext_resource type="Script" path="res://seas.gd" id="1_d4l7d"]
@@ -14,6 +14,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mxop"]
+size = Vector2(900, 397)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(458, 308)
 script = ExtResource("1_d4l7d")
@@ -22,3 +25,5 @@ script = ExtResource("1_d4l7d")
 sprite_frames = SubResource("SpriteFrames_qk4o4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_7mxop")

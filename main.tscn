@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbgf43bkxk4e0"]
+[gd_scene load_steps=9 format=3 uid="uid://bbgf43bkxk4e0"]
 
 [ext_resource type="Texture2D" uid="uid://b2c26u2h8lcj0" path="res://Brown.png" id="1_5ari0"]
 [ext_resource type="Texture2D" uid="uid://c05w7rggkobpo" path="res://Tile-Sets (64-64).png" id="2_ju0qr"]
 [ext_resource type="PackedScene" uid="uid://h1f3o1eiwj5m" path="res://scenes/main_character.tscn" id="3_0s3yh"]
 [ext_resource type="Script" path="res://scenes/main_character.gd" id="4_jsnug"]
-[ext_resource type="PackedScene" uid="uid://c01n3sb7b3ibi" path="res://scenes/seas.tscn" id="5_tknst"]
+[ext_resource type="PackedScene" uid="uid://dvtf73620rohj" path="res://seaTest.tscn" id="6_fosls"]
+[ext_resource type="Script" path="res://seaTest.gd" id="7_ii4es"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61oqu"]
 texture = ExtResource("2_ju0qr")
@@ -1478,5 +1479,8 @@ layer_0/tile_data = PackedInt32Array(2228224, 0, 0, 2293760, 0, 1, 2228225, 6553
 position = Vector2(459, 1043)
 script = ExtResource("4_jsnug")
 
-[node name="Seas" parent="." instance=ExtResource("5_tknst")]
-position = Vector2(454, 1355)
+[node name="Area2D" parent="." instance=ExtResource("6_fosls")]
+position = Vector2(449, 1455)
+script = ExtResource("7_ii4es")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
