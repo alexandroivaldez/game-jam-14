@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cublbod6gpxyh"
-path="res://.godot/imported/water-box.png-bea72560705efb731aec87d4ef45a1ea.ctex"
+uid="uid://bcp2mfjfhvbmr"
+path="res://.godot/imported/Terrain (16x16).png-08440d825000be5cd6a24cdf2c2e8ddf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://water-box.png"
-dest_files=["res://.godot/imported/water-box.png-bea72560705efb731aec87d4ef45a1ea.ctex"]
+source_file="res://assets/Terrain (16x16).png"
+dest_files=["res://.godot/imported/Terrain (16x16).png-08440d825000be5cd6a24cdf2c2e8ddf.ctex"]
 
 [params]
 

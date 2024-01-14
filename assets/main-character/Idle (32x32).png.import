@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c05w7rggkobpo"
-path="res://.godot/imported/Tile-Sets (64-64).png-183a330abccb73c1295735f29627b113.ctex"
+uid="uid://45r5jkbilmwt"
+path="res://.godot/imported/Idle (32x32).png-6f2b7669b50d750e9eab965b72dd0cc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile-Sets (64-64).png"
-dest_files=["res://.godot/imported/Tile-Sets (64-64).png-183a330abccb73c1295735f29627b113.ctex"]
+source_file="res://assets/main-character/Idle (32x32).png"
+dest_files=["res://.godot/imported/Idle (32x32).png-6f2b7669b50d750e9eab965b72dd0cc7.ctex"]
 
 [params]
 
