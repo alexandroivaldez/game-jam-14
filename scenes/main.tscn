@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbgf43bkxk4e0"]
+[gd_scene load_steps=10 format=3 uid="uid://bbgf43bkxk4e0"]
 
 [ext_resource type="Texture2D" uid="uid://b2c26u2h8lcj0" path="res://assets/Brown.png" id="1_jlohw"]
 [ext_resource type="Texture2D" uid="uid://c05w7rggkobpo" path="res://assets/Tile-Sets (64-64).png" id="2_qg5uf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/main_character.gd" id="4_1gkre"]
 [ext_resource type="PackedScene" uid="uid://dvtf73620rohj" path="res://prefabs/seaTest.tscn" id="5_8hao6"]
 [ext_resource type="Script" path="res://scripts/seaTest.gd" id="6_m8du1"]
+[ext_resource type="PackedScene" uid="uid://b6046xjej8e3s" path="res://prefabs/coin.tscn" id="7_1ws71"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61oqu"]
 texture = ExtResource("2_qg5uf")
@@ -1485,5 +1486,11 @@ script = ExtResource("6_m8du1")
 
 [node name="Camera2D" type="Camera2D" parent="Area2D"]
 position = Vector2(4, -716)
+
+[node name="coin" parent="." instance=ExtResource("7_1ws71")]
+position = Vector2(674, 914)
+
+[node name="coin2" parent="." instance=ExtResource("7_1ws71")]
+position = Vector2(574, 956)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
