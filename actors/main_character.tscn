@@ -1,5 +1,6 @@
-[gd_scene load_steps=36 format=3 uid="uid://h1f3o1eiwj5m"]
+[gd_scene load_steps=38 format=3 uid="uid://h1f3o1eiwj5m"]
 
+[ext_resource type="Script" path="res://scripts/main_character.gd" id="1_3nvc4"]
 [ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://assets/main-character/Jump (32x32).png" id="1_kmxrt"]
 [ext_resource type="Texture2D" uid="uid://45r5jkbilmwt" path="res://assets/main-character/Idle (32x32).png" id="1_thhkl"]
 [ext_resource type="Texture2D" uid="uid://bvh7efw47pwsu" path="res://assets/main-character/Double Jump (32x32).png" id="2_yr0v7"]
@@ -237,17 +238,29 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cdg3"]
 size = Vector2(48, 61)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfilh"]
+size = Vector2(48, 8)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(386, 268)
+collision_mask = 87
+script = ExtResource("1_3nvc4")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2.15625, 2.15625)
 sprite_frames = SubResource("SpriteFrames_js00j")
-animation = &"doubleJump"
 autoplay = "default"
-frame_progress = 0.798612
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_3cdg3")
+
+[node name="head_collider" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+
+[node name="collider" type="CollisionShape2D" parent="head_collider"]
+position = Vector2(0, -28)
+shape = SubResource("RectangleShape2D_bfilh")
+
+[connection signal="body_entered" from="head_collider" to="." method="_on_head_collider_body_entered"]

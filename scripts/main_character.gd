@@ -46,3 +46,14 @@ func _physics_process(delta):
 	
 	var isLeft = velocity.x < 0
 	mainChar.flip_h = isLeft
+	
+
+
+func _on_head_collider_body_entered(body):
+	if body.has_method("break_sprite"):
+		body.hitpoints -= 1
+		if body.hitpoints < 0:
+			body.break_sprite()
+		else:
+			body.create_coin()
+			body.animation_player.play("hit")
