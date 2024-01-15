@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://dojre1wxwja7h"]
+
+[ext_resource type="Texture2D" uid="uid://bcp2mfjfhvbmr" path="res://assets/Terrain (16x16).png" id="1_surpy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8eobg"]
+size = Vector2(48, 5)
+
+[sub_resource type="Animation" id="Animation_2hw8r"]
+resource_name = "move_loop"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 73), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s0j5x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 73)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w44p0"]
+_data = {
+"RESET": SubResource("Animation_s0j5x"),
+"move_loop": SubResource("Animation_2hw8r")
+}
+
+[node name="VerticalPlatform" type="Node2D"]
+
+[node name="Platform" type="AnimatableBody2D" parent="."]
+position = Vector2(0, 73)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+texture = ExtResource("1_surpy")
+region_enabled = true
+region_rect = Rect2(272, 32, 48, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_8eobg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
+libraries = {
+"": SubResource("AnimationLibrary_w44p0")
+}
+autoplay = "move_loop"
