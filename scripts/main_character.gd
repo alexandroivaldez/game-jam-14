@@ -44,10 +44,14 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	for platforms in get_slide_collision_count():
+		var collision = get_slide_collision(platforms)
+		if collision.get_collider().has_method("has_collided_with"):
+			collision.get_collider().has_collided_with(collision, self)
+	
 	var isLeft = velocity.x < 0
 	mainChar.flip_h = isLeft
 	
-
 
 func _on_head_collider_body_entered(body):
 	if body.has_method("break_sprite"):
