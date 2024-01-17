@@ -1,4 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbgf43bkxk4e0"]
+[gd_scene load_steps=15 format=3 uid="uid://bbgf43bkxk4e0"]
+
 [ext_resource type="Texture2D" uid="uid://b2c26u2h8lcj0" path="res://assets/Brown.png" id="1_jlohw"]
 [ext_resource type="Texture2D" uid="uid://c05w7rggkobpo" path="res://assets/Tile-Sets (64-64).png" id="2_qg5uf"]
 [ext_resource type="PackedScene" uid="uid://h1f3o1eiwj5m" path="res://actors/main_character.tscn" id="3_4q162"]
@@ -7,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://b6046xjej8e3s" path="res://prefabs/coin.tscn" id="7_1ws71"]
 [ext_resource type="PackedScene" uid="uid://cf3pdo5kjmy3t" path="res://prefabs/moving_platform.tscn" id="8_oieha"]
 [ext_resource type="PackedScene" uid="uid://dojre1wxwja7h" path="res://prefabs/vertical_platform.tscn" id="9_0si0s"]
-[ext_resource type="PackedScene" uid="uid://xmpex08obkk6" path="res://prefabs/falling_platform.tscn" id="9_p7jwn"]
 [ext_resource type="PackedScene" uid="uid://wkgwu7wsk833" path="res://prefabs/EnemyTemplate.tscn" id="9_2fn23"]
+[ext_resource type="PackedScene" uid="uid://xmpex08obkk6" path="res://prefabs/falling_platform.tscn" id="9_p7jwn"]
 [ext_resource type="PackedScene" uid="uid://cpq671wsvl6cp" path="res://prefabs/platform_enemy.tscn" id="10_pd1bl"]
-
+[ext_resource type="PackedScene" uid="uid://dniyhyxwldgme" path="res://prefabs/seagull.tscn" id="12_mci0p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ip6w"]
 texture = ExtResource("2_qg5uf")
@@ -1532,11 +1533,13 @@ scale = Vector2(3, 3)
 position = Vector2(738, 345)
 scale = Vector2(3, 3)
 
-
 [node name="falling-platform" parent="." instance=ExtResource("9_p7jwn")]
 position = Vector2(287, 952)
 
 [node name="EnemyTemplate" parent="." instance=ExtResource("9_2fn23")]
+visible = false
 
+[node name="Seagull" parent="." instance=ExtResource("12_mci0p")]
+position = Vector2(946, 154)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
