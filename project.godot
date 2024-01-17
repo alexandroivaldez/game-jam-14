@@ -13,6 +13,8 @@ config_version=5
 config/name="Spreading Seas"
 run/main_scene="res://scenes/mainMenu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/bg_color=Color(0.156863, 0.466667, 0.545098, 1)
+boot_splash/image="res://logo.png"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -26,6 +28,7 @@ window/size/viewport_width=890
 window/size/viewport_height=1152
 window/size/mode=2
 window/size/resizable=false
+mouse_cursor/bg_color=Color(0.167056, 0.594343, 0.954394, 1)
 
 [layer_names]
 
