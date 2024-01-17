@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dw2u5g061nci0"]
+[gd_scene load_steps=8 format=3 uid="uid://dw2u5g061nci0"]
 
 [ext_resource type="PackedScene" uid="uid://h1f3o1eiwj5m" path="res://actors/main_character.tscn" id="1_6rsej"]
 [ext_resource type="Texture2D" uid="uid://c05w7rggkobpo" path="res://assets/Tile-Sets (64-64).png" id="1_pd1te"]
 [ext_resource type="PackedScene" uid="uid://xmpex08obkk6" path="res://prefabs/falling_platform.tscn" id="4_63ixf"]
 [ext_resource type="PackedScene" uid="uid://qstbd14m2rdb" path="res://prefabs/break_box.tscn" id="4_vc7sm"]
+[ext_resource type="PackedScene" uid="uid://dr07ibdx8nx5t" path="res://prefabs/spikes.tscn" id="5_h4prx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61oqu"]
 texture = ExtResource("1_pd1te")
@@ -1466,7 +1467,11 @@ layer_0/tile_data = PackedInt32Array(2228224, 0, 0, 2293760, 0, 1, 2228225, 6553
 position = Vector2(664, 640)
 
 [node name="break-box" parent="." instance=ExtResource("4_vc7sm")]
-position = Vector2(240, 576)
+position = Vector2(512, 448)
 
 [node name="falling-platform" parent="." instance=ExtResource("4_63ixf")]
-position = Vector2(792, 592)
+position = Vector2(760, 488)
+
+[node name="spikes" parent="." instance=ExtResource("5_h4prx")]
+position = Vector2(384, 696)
+spike_length = 10
