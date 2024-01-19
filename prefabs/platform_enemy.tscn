@@ -1,8 +1,14 @@
-[gd_scene load_steps=22 format=3 uid="uid://cpq671wsvl6cp"]
+[gd_scene load_steps=26 format=3 uid="uid://cpq671wsvl6cp"]
 
 [ext_resource type="PackedScene" uid="uid://wkgwu7wsk833" path="res://prefabs/EnemyTemplate.tscn" id="1_h77q4"]
 [ext_resource type="Script" path="res://scripts/platform_enemy.gd" id="2_vmk80"]
 [ext_resource type="Texture2D" uid="uid://d31ddf5053u6k" path="res://assets/AngryPig/Walk (36x30).png" id="3_cpcer"]
+[ext_resource type="Texture2D" uid="uid://bfinhefu04ngx" path="res://assets/AngryPig/Hit 1 (36x30).png" id="3_grdel"]
+[ext_resource type="PackedScene" uid="uid://doyeg20qdcm1y" path="res://prefabs/enemy_hurtbox.tscn" id="4_g7eg1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt6wk"]
+atlas = ExtResource("3_grdel")
+region = Rect2(0, 0, 36, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8b7jb"]
 atlas = ExtResource("3_cpcer")
@@ -72,6 +78,14 @@ region = Rect2(540, 0, 36, 30)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qt6wk")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8b7jb")
 }, {
 "duration": 1.0,
@@ -127,17 +141,31 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_f52fx"]
 radius = 13.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oao4"]
+size = Vector2(26, 6)
+
 [node name="PlatformEnemy" instance=ExtResource("1_h77q4")]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("2_vmk80")
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_cfrdn")
-animation = &"walk"
+animation = &"hurt"
 autoplay = "walk"
 
 [node name="FloorDetection" type="RayCast2D" parent="." index="2"]
 position = Vector2(-15, 0)
 target_position = Vector2(0, 30)
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 shape = SubResource("CircleShape2D_f52fx")
+
+[node name="enemy-hurtbox" parent="." index="4" instance=ExtResource("4_g7eg1")]
+
+[node name="collision" type="CollisionShape2D" parent="enemy-hurtbox" index="0"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7oao4")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
