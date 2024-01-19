@@ -148,10 +148,11 @@ size = Vector2(26, 6)
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("2_vmk80")
+enemy_score = 100
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_cfrdn")
-animation = &"hurt"
+animation = &"walk"
 autoplay = "walk"
 
 [node name="FloorDetection" type="RayCast2D" parent="." index="2"]

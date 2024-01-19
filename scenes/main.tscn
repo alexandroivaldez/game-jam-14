@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bbgf43bkxk4e0"]
+[gd_scene load_steps=19 format=3 uid="uid://bbgf43bkxk4e0"]
 
 [ext_resource type="Texture2D" uid="uid://b2c26u2h8lcj0" path="res://assets/Brown.png" id="1_jlohw"]
 [ext_resource type="Texture2D" uid="uid://c05w7rggkobpo" path="res://assets/Tile-Sets (64-64).png" id="2_qg5uf"]
@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://xmpex08obkk6" path="res://prefabs/falling_platform.tscn" id="9_p7jwn"]
 [ext_resource type="PackedScene" uid="uid://cpq671wsvl6cp" path="res://prefabs/platform_enemy.tscn" id="10_pd1bl"]
 [ext_resource type="PackedScene" uid="uid://dniyhyxwldgme" path="res://prefabs/seagull.tscn" id="12_mci0p"]
+[ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/Mini FX, Items & UI/Coin-Sprites/00_Coin-Sprites.png" id="13_0e2yw"]
+[ext_resource type="Script" path="res://scripts/hud_manager.gd" id="13_wnah2"]
+[ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://assets/main-character/Jump (32x32).png" id="14_b57u7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ip6w"]
 texture = ExtResource("2_qg5uf")
@@ -1476,6 +1479,10 @@ texture = ExtResource("2_qg5uf")
 physics_layer_0/collision_layer = 3
 sources/2 = SubResource("TileSetAtlasSource_4ip6w")
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_dgahx"]
+speed_scale = 3.0
+frame_0/texture = ExtResource("13_0e2yw")
+
 [node name="Node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -1504,11 +1511,13 @@ collision_mask = 86
 [node name="PlatformEnemy" parent="." instance=ExtResource("10_pd1bl")]
 position = Vector2(551, 841)
 scale = Vector2(1.5, 1.5)
+enemy_score = 100
 metadata/_edit_group_ = true
 
 [node name="PlatformEnemy2" parent="." instance=ExtResource("10_pd1bl")]
 position = Vector2(391, 424)
 scale = Vector2(1.5, 1.5)
+enemy_score = 100
 metadata/_edit_group_ = true
 
 [node name="Area2D" parent="." instance=ExtResource("5_8hao6")]
@@ -1541,5 +1550,90 @@ visible = false
 
 [node name="Seagull" parent="." instance=ExtResource("12_mci0p")]
 position = Vector2(946, 154)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_wnah2")
+
+[node name="container" type="MarginContainer" parent="HUD/control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="coins_container" type="HBoxContainer" parent="HUD/control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="coins_icon" type="TextureRect" parent="HUD/control/container/coins_container"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_dgahx")
+
+[node name="coins_counter" type="Label" parent="HUD/control/container/coins_container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "0000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score_container" type="HBoxContainer" parent="HUD/control/container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="score_counter" type="Label" parent="HUD/control/container/score_container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="life_container" type="HBoxContainer" parent="HUD/control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="life_icon" type="TextureRect" parent="HUD/control/container/life_container"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("14_b57u7")
+
+[node name="life_counter" type="Label" parent="HUD/control/container/life_container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "x03"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

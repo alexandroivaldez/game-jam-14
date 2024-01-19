@@ -1476,15 +1476,19 @@ spike_length = 10
 
 [node name="PlatformEnemy" parent="." instance=ExtResource("6_o1hyj")]
 position = Vector2(496, 552)
+enemy_score = 100
 
 [node name="PlatformEnemy2" parent="." instance=ExtResource("6_o1hyj")]
 position = Vector2(360, 424)
+enemy_score = 100
 
 [node name="PlatformEnemy3" parent="." instance=ExtResource("6_o1hyj")]
 position = Vector2(184, 680)
+enemy_score = 100
 
 [node name="PlatformEnemy4" parent="." instance=ExtResource("6_o1hyj")]
 position = Vector2(808, 680)
+enemy_score = 100
 
 [node name="break-box" parent="." instance=ExtResource("4_vc7sm")]
 position = Vector2(656, 528)
