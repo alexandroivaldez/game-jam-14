@@ -1511,13 +1511,11 @@ collision_mask = 86
 [node name="PlatformEnemy" parent="." instance=ExtResource("10_pd1bl")]
 position = Vector2(551, 841)
 scale = Vector2(1.5, 1.5)
-enemy_score = 100
 metadata/_edit_group_ = true
 
 [node name="PlatformEnemy2" parent="." instance=ExtResource("10_pd1bl")]
 position = Vector2(391, 424)
 scale = Vector2(1.5, 1.5)
-enemy_score = 100
 metadata/_edit_group_ = true
 
 [node name="Area2D" parent="." instance=ExtResource("5_8hao6")]
