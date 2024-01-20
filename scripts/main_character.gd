@@ -74,6 +74,9 @@ func _on_hurtbox_body_entered(_body):
 	elif ray_left.is_colliding():
 		take_damage(Vector2(200, -200))
 
+func _on_hurtbox_area_entered(area):
+	take_damage(Vector2(0, -400))
+
 func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
 	if Globals.player_life > 0:
 		Globals.player_life -= 1
@@ -98,3 +101,5 @@ func _on_head_collider_body_entered(body):
 		else:
 			body.create_coin()
 			body.animation_player.play("hit")
+
+
