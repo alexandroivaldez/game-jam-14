@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cublbod6gpxyh"
-path="res://.godot/imported/water-box.png-6d5883caaccebf0b6248819dea5cfb25.ctex"
+uid="uid://bsiv2xmv7pmpi"
+path="res://.godot/imported/waterFlow-Sheet.png-6d89ea7b0a4fd573b2ca1ab897ed83ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/water-box.png"
-dest_files=["res://.godot/imported/water-box.png-6d5883caaccebf0b6248819dea5cfb25.ctex"]
+source_file="res://assets/WaterPipe/waterFlow-Sheet.png"
+dest_files=["res://.godot/imported/waterFlow-Sheet.png-6d89ea7b0a4fd573b2ca1ab897ed83ef.ctex"]
 
 [params]
 

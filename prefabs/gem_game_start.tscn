@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://dt7t8e5rl5w6n"]
+
+[ext_resource type="Texture2D" uid="uid://cf5eaunngptqh" path="res://assets/Mini FX, Items & UI/Common Pick-ups/Heart_Spin (16 x 16).png" id="1_nqx4o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3flgf"]
+radius = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25vut"]
+atlas = ExtResource("1_nqx4o")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34s23"]
+atlas = ExtResource("1_nqx4o")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq4ut"]
+atlas = ExtResource("1_nqx4o")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kik13"]
+atlas = ExtResource("1_nqx4o")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g8xj4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25vut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34s23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq4ut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kik13")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="gem_game-start" type="Area2D"]
+position = Vector2(352, 739)
+collision_layer = 3
+collision_mask = 3
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3flgf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -21)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_g8xj4")
+autoplay = "default"
+frame_progress = 0.461401

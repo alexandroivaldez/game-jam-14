@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wkgwu7wsk833" path="res://prefabs/EnemyTemplate.tscn" id="1_ma3j2"]
 [ext_resource type="Texture2D" uid="uid://cdcxixyhakeu7" path="res://assets/BlueBird/Flying (32x32).png" id="2_6mt7j"]
-[ext_resource type="Script" path="res://prefabs/seagull.gd" id="2_i4am3"]
+[ext_resource type="Script" path="res://scripts/seagull.gd" id="2_i4am3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6k2or"]
 atlas = ExtResource("2_6mt7j")
