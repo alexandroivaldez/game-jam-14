@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cublbod6gpxyh"
-path="res://.godot/imported/water-box.png-6d5883caaccebf0b6248819dea5cfb25.ctex"
+uid="uid://ds3pb7hi5eott"
+path="res://.godot/imported/stone-pillar.png-ccde4ab7f86746dc5271d35ce7758198.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/water-box.png"
-dest_files=["res://.godot/imported/water-box.png-6d5883caaccebf0b6248819dea5cfb25.ctex"]
+source_file="res://assets/stone-pillar.png"
+dest_files=["res://.godot/imported/stone-pillar.png-ccde4ab7f86746dc5271d35ce7758198.ctex"]
 
 [params]
 
