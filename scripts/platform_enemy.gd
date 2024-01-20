@@ -35,3 +35,8 @@ func flip_me() -> void:
 		_facing = FACING.RIGHT
 	else:
 		_facing = FACING.LEFT
+
+
+func _on_animated_sprite_2d_animation_finished():
+	if animated_sprite_2d.animation == "hurt":
+		queue_free()

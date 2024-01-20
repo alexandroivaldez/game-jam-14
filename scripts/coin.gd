@@ -1,5 +1,6 @@
 extends Area2D
 @onready var coinSound = $AudioStreamPlayer2D
+var coins := 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +14,8 @@ func _process(_delta):
 
 func _on_body_entered(_body):
 	$anim.play("collect")
+	await $collision.call_deferred("queue_free")
+	Globals.coins += coins
 	coinSound.play()
 
 func _on_anim_animation_finished():
