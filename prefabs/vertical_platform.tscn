@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dojre1wxwja7h"]
 
-[ext_resource type="Texture2D" uid="uid://bcp2mfjfhvbmr" path="res://assets/Terrain (16x16).png" id="1_surpy"]
+[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/tileset.png" id="1_oi262"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8eobg"]
-size = Vector2(48, 5)
+size = Vector2(66, 6)
 
 [sub_resource type="Animation" id="Animation_s0j5x"]
 length = 0.001
@@ -51,12 +51,13 @@ collision_layer = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform"]
-texture = ExtResource("1_surpy")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_oi262")
 region_enabled = true
-region_rect = Rect2(272, 32, 48, 8)
+region_rect = Rect2(64, 0, 192, 24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(0, -1.5)
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_8eobg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]

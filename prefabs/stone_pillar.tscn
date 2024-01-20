@@ -7,7 +7,7 @@
 size = Vector2(58, 64)
 
 [node name="StonePillar" type="AnimatableBody2D"]
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 collision_layer = 2
 script = ExtResource("1_rbvds")
 
