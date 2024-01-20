@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bbgf43bkxk4e0"]
+[gd_scene load_steps=22 format=3 uid="uid://bbgf43bkxk4e0"]
 
 [ext_resource type="Texture2D" uid="uid://b2c26u2h8lcj0" path="res://assets/Brown.png" id="1_jlohw"]
 [ext_resource type="Texture2D" uid="uid://c05w7rggkobpo" path="res://assets/Tile-Sets (64-64).png" id="2_qg5uf"]
@@ -14,7 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://dniyhyxwldgme" path="res://prefabs/seagull.tscn" id="12_mci0p"]
 [ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/Mini FX, Items & UI/Coin-Sprites/00_Coin-Sprites.png" id="13_0e2yw"]
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="13_wnah2"]
+[ext_resource type="PackedScene" uid="uid://dt7t8e5rl5w6n" path="res://prefabs/gem_game_start.tscn" id="14_0dhds"]
 [ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://assets/main-character/Jump (32x32).png" id="14_b57u7"]
+[ext_resource type="Script" path="res://scripts/gem_game_start.gd" id="15_2wh1i"]
+[ext_resource type="PackedScene" uid="uid://dn8xavai03itc" path="res://prefabs/water_pipe.tscn" id="16_fhblx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ip6w"]
 texture = ExtResource("2_qg5uf")
@@ -1518,12 +1521,16 @@ position = Vector2(391, 424)
 scale = Vector2(1.5, 1.5)
 metadata/_edit_group_ = true
 
-[node name="Area2D" parent="." instance=ExtResource("5_8hao6")]
+[node name="WaterPipe" parent="." instance=ExtResource("16_fhblx")]
+position = Vector2(80, 1040)
+
+[node name="seaTest" parent="." instance=ExtResource("5_8hao6")]
+modulate = Color(1, 1, 1, 0.737255)
 position = Vector2(449, 1455)
 collision_layer = 0
 script = ExtResource("6_m8du1")
 
-[node name="Camera2D" type="Camera2D" parent="Area2D"]
+[node name="Camera2D" type="Camera2D" parent="seaTest"]
 position = Vector2(4, -716)
 
 [node name="coin" parent="." instance=ExtResource("7_1ws71")]
@@ -1548,6 +1555,9 @@ visible = false
 
 [node name="Seagull" parent="." instance=ExtResource("12_mci0p")]
 position = Vector2(946, 154)
+
+[node name="gem_game-start" parent="." instance=ExtResource("14_0dhds")]
+script = ExtResource("15_2wh1i")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -1634,4 +1644,5 @@ text = "x03"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="seaTest" to="seaTest" method="_on_body_entered"]
+[connection signal="body_entered" from="gem_game-start" to="WaterPipe" method="_on_gem_gamestart_body_entered"]

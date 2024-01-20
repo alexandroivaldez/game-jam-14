@@ -1,12 +1,72 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvtf73620rohj"]
+[gd_scene load_steps=13 format=3 uid="uid://dvtf73620rohj"]
 
-[ext_resource type="Texture2D" uid="uid://cublbod6gpxyh" path="res://assets/water-box.png" id="1_2ydwd"]
+[ext_resource type="Texture2D" uid="uid://b2rbdnf8ynvf3" path="res://assets/water-box-sheet.png" id="1_swedy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl0np"]
+atlas = ExtResource("1_swedy")
+region = Rect2(0, 0, 900, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lok7y"]
+atlas = ExtResource("1_swedy")
+region = Rect2(900, 0, 900, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11ovp"]
+atlas = ExtResource("1_swedy")
+region = Rect2(1800, 0, 900, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lljud"]
+atlas = ExtResource("1_swedy")
+region = Rect2(2700, 0, 900, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roebc"]
+atlas = ExtResource("1_swedy")
+region = Rect2(3600, 0, 900, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt3m2"]
+atlas = ExtResource("1_swedy")
+region = Rect2(4500, 0, 900, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcpr2"]
+atlas = ExtResource("1_swedy")
+region = Rect2(5400, 0, 900, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8am6"]
+atlas = ExtResource("1_swedy")
+region = Rect2(6300, 0, 900, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7swdu"]
+atlas = ExtResource("1_swedy")
+region = Rect2(7200, 0, 900, 400)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ymr0v"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_2ydwd")
+"texture": SubResource("AtlasTexture_fl0np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lok7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11ovp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lljud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roebc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt3m2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcpr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8am6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7swdu")
 }],
 "loop": true,
 "name": &"default",
@@ -23,6 +83,7 @@ position = Vector2(-300, -104)
 position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_ymr0v")
 autoplay = "default"
+frame_progress = 0.685895
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1.5)
