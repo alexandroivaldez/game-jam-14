@@ -2,6 +2,7 @@ extends EnemyTemplate
 
 @onready var floor_detection = $FloorDetection
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@export var enemy_score := 100
 
 func _ready():
 	pass
@@ -38,5 +39,6 @@ func flip_me() -> void:
 
 
 func _on_animated_sprite_2d_animation_finished():
+	Globals.score += enemy_score
 	if animated_sprite_2d.animation == "hurt":
 		queue_free()

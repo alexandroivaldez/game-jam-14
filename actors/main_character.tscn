@@ -258,7 +258,7 @@ animations = [{
 size = Vector2(35, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bfilh"]
-size = Vector2(48, 8)
+size = Vector2(38, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8hqb"]
 size = Vector2(45, 47)
@@ -285,7 +285,7 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="collider" type="CollisionShape2D" parent="head_collider"]
-position = Vector2(0, -19)
+position = Vector2(0, -18)
 shape = SubResource("RectangleShape2D_bfilh")
 
 [node name="ray_left" type="RayCast2D" parent="."]
