@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2c26u2h8lcj0"
-path="res://.godot/imported/Brown.png-6457a46e63940fff6db0ca3ec2eb9b68.ctex"
+uid="uid://mu6eigj54f0g"
+path="res://.godot/imported/woodenSign.png-dfaf12f45e483abc2a07e106ea5e1573.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Brown.png"
-dest_files=["res://.godot/imported/Brown.png-6457a46e63940fff6db0ca3ec2eb9b68.ctex"]
+source_file="res://assets/woodenSign.png"
+dest_files=["res://.godot/imported/woodenSign.png-dfaf12f45e483abc2a07e106ea5e1573.ctex"]
 
 [params]
 

@@ -52,7 +52,7 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Platform"]
 texture = ExtResource("1_reyok")
 region_enabled = true
-region_rect = Rect2(272, 16, 48, 8)
+region_rect = Rect2(272, 32, 48, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
 position = Vector2(0, -1.5)
