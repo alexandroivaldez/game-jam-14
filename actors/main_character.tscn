@@ -1,10 +1,12 @@
-[gd_scene load_steps=41 format=3 uid="uid://h1f3o1eiwj5m"]
+[gd_scene load_steps=43 format=3 uid="uid://h1f3o1eiwj5m"]
 
 [ext_resource type="Script" path="res://scripts/main_character.gd" id="1_3nvc4"]
 [ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://assets/main-character/Jump (32x32).png" id="1_kmxrt"]
 [ext_resource type="Texture2D" uid="uid://45r5jkbilmwt" path="res://assets/main-character/Idle (32x32).png" id="1_thhkl"]
 [ext_resource type="Texture2D" uid="uid://bvh7efw47pwsu" path="res://assets/main-character/Double Jump (32x32).png" id="2_yr0v7"]
 [ext_resource type="Texture2D" uid="uid://w25hhw540s6m" path="res://assets/main-character/Run (32x32).png" id="3_w23iu"]
+[ext_resource type="AudioStream" uid="uid://cchg6wcgy2k8d" path="res://sounds/zapsplat_cartoon_twang_bounce_boing_spring_53049.mp3" id="6_npjyr"]
+[ext_resource type="AudioStream" uid="uid://cwa8irckcj7p3" path="res://sounds/zapsplat_human_male_vocalisation_hit_pain_arhh_66497.mp3" id="7_q024f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxrgj"]
 atlas = ExtResource("2_yr0v7")
@@ -308,6 +310,12 @@ collision_mask = 4
 position = Vector2(1.5, 8.5)
 shape = SubResource("RectangleShape2D_q8hqb")
 debug_color = Color(0.94902, 0.164706, 0.392157, 0.419608)
+
+[node name="jumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_npjyr")
+
+[node name="hurtSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_q024f")
 
 [connection signal="body_entered" from="head_collider" to="." method="_on_head_collider_body_entered"]
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
