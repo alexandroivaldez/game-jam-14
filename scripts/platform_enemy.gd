@@ -39,6 +39,7 @@ func flip_me() -> void:
 
 
 func _on_animated_sprite_2d_animation_finished():
-	Globals.score += enemy_score
+	Globals.score += enemy_score	
+	
 	if animated_sprite_2d.animation == "hurt":
 		queue_free()

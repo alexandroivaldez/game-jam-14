@@ -7,6 +7,9 @@ const SPEED = 300.0
 @onready var ray_left = $ray_left
 @onready var ray_right = $ray_right
 
+@onready var jumpSound = $jumpSound
+@onready var hurt_sound = $hurtSound
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var knockback_vector := Vector2.ZERO
 var jumpCount := 0
@@ -32,8 +35,10 @@ func _physics_process(delta):
 	# Handle double jump animationation
 	if velocity.y < 0 and jumpCount == 1:
 		animation.play("jump")
+		jumpSound.pitch_scale = 1.0
 	elif velocity.y < 0 and jumpCount == 2:
 		animation.play("doubleJump")
+		jumpSound.pitch_scale = 1.25
 		
 	# reset jumpCounter.
 	if is_on_floor():
@@ -42,6 +47,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
 		if jumpCount < 2:
+			jumpSound.play()
 			velocity.y = JUMP_VELOCITY
 			jumpCount = jumpCount + 1
 
@@ -78,6 +84,7 @@ func _on_hurtbox_area_entered(area):
 	take_damage(Vector2(0, -400))
 
 func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
+	hurt_sound.play()
 	if Globals.player_life > 0:
 		Globals.player_life -= 1
 	else:
@@ -93,6 +100,7 @@ func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
 	is_hurted = true
 	await get_tree().create_timer(.3).timeout
 	is_hurted = false
+	
 func _on_head_collider_body_entered(body):
 	if body.has_method("break_sprite"):
 		body.hitpoints -= 1
