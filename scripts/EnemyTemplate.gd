@@ -20,7 +20,7 @@ var _dying: bool = false
 func _ready():
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	fallen_off()
 
 # Handle enemy falling out of bounds

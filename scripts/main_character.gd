@@ -80,7 +80,7 @@ func _on_hurtbox_body_entered(_body):
 	elif ray_left.is_colliding():
 		take_damage(Vector2(200, -200))
 
-func _on_hurtbox_area_entered(area):
+func _on_hurtbox_area_entered(_area):
 	take_damage(Vector2(0, -400))
 
 func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
