@@ -9,6 +9,8 @@ const SPEED = 300.0
 
 @onready var jumpSound = $jumpSound
 @onready var hurt_sound = $hurtSound
+@onready var player_death_sound = $playerDeathSound
+
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var knockback_vector := Vector2.ZERO
@@ -35,14 +37,15 @@ func _physics_process(delta):
 	# Handle double jump animationation
 	if velocity.y < 0 and jumpCount == 1:
 		animation.play("jump")
-		jumpSound.pitch_scale = 1.0
+		jumpSound.pitch_scale = 1.25
 	elif velocity.y < 0 and jumpCount == 2:
 		animation.play("doubleJump")
-		jumpSound.pitch_scale = 1.25
+		jumpSound.pitch_scale = 1.50
 		
 	# reset jumpCounter.
 	if is_on_floor():
 		jumpCount = 0
+		
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
@@ -84,10 +87,13 @@ func _on_hurtbox_area_entered(_area):
 	take_damage(Vector2(0, -400))
 
 func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
-	hurt_sound.play()
+	
 	if Globals.player_life > 0:
+		hurt_sound.play()
 		Globals.player_life -= 1
 	else:
+		player_death_sound.play()
+		await get_tree().create_timer(.30).timeout
 		queue_free()
 		emit_signal("player_has_died")
 	if knockback_force != Vector2.ZERO:

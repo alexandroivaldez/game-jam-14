@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvtf73620rohj"]
+[gd_scene load_steps=14 format=3 uid="uid://dvtf73620rohj"]
 
 [ext_resource type="Texture2D" uid="uid://b2rbdnf8ynvf3" path="res://assets/water-box-sheet.png" id="1_swedy"]
+[ext_resource type="AudioStream" uid="uid://c3t3xwpkctkg0" path="res://sounds/zapsplat_human_male_vocalisation_hit_pain_strained_weak_66501.mp3" id="2_pm8am"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fl0np"]
 atlas = ExtResource("1_swedy")
@@ -88,3 +89,6 @@ frame_progress = 0.685895
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1.5)
 shape = SubResource("RectangleShape2D_ax5ij")
+
+[node name="PlayerDeath" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_pm8am")

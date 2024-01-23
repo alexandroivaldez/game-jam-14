@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://dn8xavai03itc"]
+[gd_scene load_steps=16 format=3 uid="uid://dn8xavai03itc"]
 
 [ext_resource type="Texture2D" uid="uid://fpgk6xbtnd56" path="res://assets/WaterPipe/waterPipe-Sheet.png" id="1_knk0c"]
 [ext_resource type="Script" path="res://scripts/water_pipe.gd" id="1_ktcd2"]
 [ext_resource type="Texture2D" uid="uid://4kybvsmdsa7h" path="res://assets/WaterPipe/waterFlowAnimation.png" id="3_ta7wa"]
+[ext_resource type="AudioStream" uid="uid://b1ar5imexy6xu" path="res://sounds/zapsplat_nayure_water_river_rocky_close_fast_shallow.mp3" id="4_juluc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lph73"]
 atlas = ExtResource("1_knk0c")
@@ -99,3 +100,8 @@ frame_progress = 0.514953
 position = Vector2(-19.5, 0)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_g0oon")
+
+[node name="WaterRising" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_juluc")
+volume_db = -18.585
+pitch_scale = 0.66
