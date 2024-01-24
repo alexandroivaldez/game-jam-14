@@ -1,8 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://dniyhyxwldgme"]
+[gd_scene load_steps=19 format=3 uid="uid://dniyhyxwldgme"]
 
 [ext_resource type="PackedScene" uid="uid://wkgwu7wsk833" path="res://prefabs/EnemyTemplate.tscn" id="1_ma3j2"]
 [ext_resource type="Texture2D" uid="uid://cdcxixyhakeu7" path="res://assets/BlueBird/Flying (32x32).png" id="2_6mt7j"]
 [ext_resource type="Script" path="res://scripts/seagull.gd" id="2_i4am3"]
+[ext_resource type="Texture2D" uid="uid://bmmrhg2oa4ege" path="res://assets/BlueBird/Hit (32x32).png" id="3_muqt2"]
+[ext_resource type="PackedScene" uid="uid://doyeg20qdcm1y" path="res://prefabs/enemy_hurtbox.tscn" id="4_m6oqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ai88j"]
+atlas = ExtResource("3_muqt2")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6k2or"]
 atlas = ExtResource("2_6mt7j")
@@ -44,6 +50,14 @@ region = Rect2(256, 0, 32, 30)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ai88j")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_6k2or")
 }, {
 "duration": 1.0,
@@ -75,13 +89,17 @@ animations = [{
 "speed": 16.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_l3gwy"]
-radius = 12.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tkd1"]
+radius = 18.0
+height = 54.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7eu1"]
+size = Vector2(40, 10)
 
 [node name="Seagull" instance=ExtResource("1_ma3j2")]
-collision_layer = 0
-collision_mask = 0
+collision_layer = 4
 script = ExtResource("2_i4am3")
+enemy_score = 100
 speed = 100.0
 
 [node name="AnimatedSprite2D" parent="." index="1"]
@@ -90,7 +108,17 @@ sprite_frames = SubResource("SpriteFrames_bnrnm")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-shape = SubResource("CircleShape2D_l3gwy")
+position = Vector2(0, 3)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_7tkd1")
 
 [node name="PlayerDetector" type="RayCast2D" parent="." index="3"]
 target_position = Vector2(0, 200)
+
+[node name="enemy-hurtbox" parent="." index="4" instance=ExtResource("4_m6oqr")]
+
+[node name="collision" type="CollisionShape2D" parent="enemy-hurtbox" index="0"]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_p7eu1")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

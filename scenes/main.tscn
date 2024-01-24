@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://wkgwu7wsk833" path="res://prefabs/EnemyTemplate.tscn" id="9_2fn23"]
 [ext_resource type="PackedScene" uid="uid://xmpex08obkk6" path="res://prefabs/falling_platform.tscn" id="9_p7jwn"]
 [ext_resource type="PackedScene" uid="uid://cpq671wsvl6cp" path="res://prefabs/platform_enemy.tscn" id="10_pd1bl"]
-[ext_resource type="PackedScene" uid="uid://dniyhyxwldgme" path="res://prefabs/seagull.tscn" id="12_mci0p"]
 [ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/Mini FX, Items & UI/Coin-Sprites/00_Coin-Sprites.png" id="13_0e2yw"]
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="13_wnah2"]
 [ext_resource type="PackedScene" uid="uid://dt7t8e5rl5w6n" path="res://prefabs/gem_game_start.tscn" id="14_0dhds"]
@@ -21,6 +20,7 @@
 [ext_resource type="Script" path="res://scripts/gem_game_start.gd" id="15_2wh1i"]
 [ext_resource type="PackedScene" uid="uid://dn8xavai03itc" path="res://prefabs/water_pipe.tscn" id="16_fhblx"]
 [ext_resource type="Texture2D" uid="uid://mu6eigj54f0g" path="res://assets/woodenSign.png" id="21_ddeel"]
+[ext_resource type="PackedScene" uid="uid://b1wnmbjfjj454" path="res://prefabs/seagull_patrol.tscn" id="22_lajx0"]
 [ext_resource type="Texture2D" uid="uid://ce6nh04ruxr3p" path="res://assets/woodenSign2.png" id="22_wpi2u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ip6w"]
@@ -5151,9 +5151,6 @@ position = Vector2(176, -107)
 [node name="EnemyTemplate" parent="." instance=ExtResource("9_2fn23")]
 visible = false
 
-[node name="Seagull" parent="." instance=ExtResource("12_mci0p")]
-position = Vector2(1132, 376)
-
 [node name="gem_game-start" parent="." instance=ExtResource("14_0dhds")]
 position = Vector2(671, 1027)
 script = ExtResource("15_2wh1i")
@@ -5242,6 +5239,9 @@ theme_override_font_sizes/font_size = 24
 text = "x03"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="seagull_patrol" parent="." instance=ExtResource("22_lajx0")]
+position = Vector2(965, 505)
 
 [connection signal="body_entered" from="seaTest" to="seaTest" method="_on_body_entered"]
 [connection signal="body_entered" from="gem_game-start" to="WaterPipe" method="_on_gem_gamestart_body_entered"]

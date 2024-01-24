@@ -5154,6 +5154,7 @@ visible = false
 
 [node name="Seagull" parent="." instance=ExtResource("17_iaf8c")]
 position = Vector2(1132, 376)
+enemy_score = 100
 
 [node name="gem_game-start" parent="." instance=ExtResource("18_gef0a")]
 position = Vector2(671, 1027)
