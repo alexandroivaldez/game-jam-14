@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://pwm6dseyxxs3"]
+
+[ext_resource type="Script" path="res://scripts/goal.gd" id="1_lno6v"]
+[ext_resource type="Texture2D" uid="uid://ce6nh04ruxr3p" path="res://assets/woodenSign2.png" id="2_u258v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a82y6"]
+size = Vector2(72, 64)
+
+[node name="goal" type="Area2D"]
+script = ExtResource("1_lno6v")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("2_u258v")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(4, -32)
+shape = SubResource("RectangleShape2D_a82y6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

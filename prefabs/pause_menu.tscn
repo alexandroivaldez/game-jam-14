@@ -11,7 +11,6 @@ events = [SubResource("InputEventAction_5imnt")]
 
 [node name="pause_menu" type="CanvasLayer"]
 process_mode = 3
-visible = false
 script = ExtResource("1_slfb3")
 
 [node name="bg_overlay" type="ColorRect" parent="."]

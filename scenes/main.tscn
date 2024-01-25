@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bbgf43bkxk4e0"]
+[gd_scene load_steps=51 format=3 uid="uid://bbgf43bkxk4e0"]
 
 [ext_resource type="Texture2D" uid="uid://c6ogve3433cka" path="res://assets/Gray.png" id="1_odhuk"]
 [ext_resource type="PackedScene" uid="uid://3judm1d04x0l" path="res://prefabs/stone_pillar.tscn" id="2_gfmtp"]
@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://ce6nh04ruxr3p" path="res://assets/woodenSign2.png" id="22_wpi2u"]
 [ext_resource type="PackedScene" uid="uid://qstbd14m2rdb" path="res://prefabs/break_box.tscn" id="25_1qwcf"]
 [ext_resource type="PackedScene" uid="uid://dln5k6816jn7g" path="res://prefabs/pause_menu.tscn" id="26_odwfq"]
+[ext_resource type="PackedScene" uid="uid://b0bj06hlw77p2" path="res://prefabs/score.tscn" id="27_57rya"]
+[ext_resource type="PackedScene" uid="uid://pwm6dseyxxs3" path="res://prefabs/goal.tscn" id="28_s7xg8"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_88yey"]
 tile_data = PackedInt32Array(0, 262147, 0, 1, 327683, 0, 65537, 327683, 1, 2, 917507, 0, 65538, 917507, 1, 3, 983043, 0)
@@ -6044,7 +6046,7 @@ position = Vector2(671, 1027)
 script = ExtResource("15_2wh1i")
 
 [node name="MainChar" parent="." instance=ExtResource("3_4q162")]
-position = Vector2(169, 50)
+position = Vector2(175, 144)
 collision_mask = 86
 
 [node name="seaTest" parent="." instance=ExtResource("5_8hao6")]
@@ -6054,7 +6056,7 @@ collision_layer = 0
 script = ExtResource("6_m8du1")
 
 [node name="Camera2D" type="Camera2D" parent="seaTest"]
-position = Vector2(4, -716)
+position = Vector2(0, -690)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -6192,6 +6194,14 @@ position = Vector2(800, -14816)
 scale = Vector2(4, 4)
 
 [node name="pause_menu" parent="." instance=ExtResource("26_odwfq")]
+visible = false
+
+[node name="score" parent="." instance=ExtResource("27_57rya")]
+visible = false
+
+[node name="goal" parent="." instance=ExtResource("28_s7xg8")]
+position = Vector2(704, -15040)
+collision_layer = 2
 
 [connection signal="body_entered" from="gem_game-start" to="BG/WaterPipe" method="_on_gem_gamestart_body_entered"]
 [connection signal="body_entered" from="gem_game-start" to="BG/StonePillar" method="_on_gem_gamestart_body_entered"]

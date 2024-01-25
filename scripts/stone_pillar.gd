@@ -16,5 +16,5 @@ func _process(delta):
 		else:
 			movePillar = false
 
-func _on_gem_gamestart_body_entered(body):
+func _on_gem_gamestart_body_entered(_body):
 	movePillar = true
