@@ -312,6 +312,9 @@ position = Vector2(1016, 1072)
 [node name="PlatformEnemy" parent="enemies" instance=ExtResource("6_o1hyj")]
 position = Vector2(1024, 1008)
 
+[node name="PlatformEnemy2" parent="enemies" instance=ExtResource("6_o1hyj")]
+position = Vector2(224, 840)
+
 [node name="platforms" type="Node" parent="."]
 
 [node name="falling-platform" parent="platforms" instance=ExtResource("4_63ixf")]
@@ -326,3 +329,20 @@ distance = 3
 [node name="break-box" parent="break-box" instance=ExtResource("4_vc7sm")]
 position = Vector2(1024, 800)
 scale = Vector2(4, 4)
+
+[node name="falling-platform17" parent="." instance=ExtResource("4_63ixf")]
+position = Vector2(224, 916.999)
+
+[node name="falling-platform18" parent="." instance=ExtResource("4_63ixf")]
+position = Vector2(672, 788.999)
+
+[node name="falling-platform19" parent="." instance=ExtResource("4_63ixf")]
+position = Vector2(224, 661)
+
+[node name="falling-platform20" parent="." instance=ExtResource("4_63ixf")]
+position = Vector2(674, 533)
+
+[node name="moving_platform_type10" parent="." instance=ExtResource("6_5uvdw")]
+position = Vector2(480, 492)
+move_speed = 25
+distance = 20
