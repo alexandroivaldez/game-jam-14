@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 100;
+@export var speed := 100;
 var moveSea = false;
 @onready var player_death = $PlayerDeath
 
