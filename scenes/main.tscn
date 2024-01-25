@@ -5075,6 +5075,7 @@ texture = ExtResource("1_odhuk")
 stretch_mode = 1
 
 [node name="WaterPipe" parent="." instance=ExtResource("16_fhblx")]
+visible = false
 position = Vector2(53, 1040)
 
 [node name="StonePillar" parent="." instance=ExtResource("2_gfmtp")]
