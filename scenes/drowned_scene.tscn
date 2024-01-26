@@ -144,6 +144,13 @@ offset_right = 787.0
 offset_bottom = 584.0
 text = "Quit"
 
+[node name="retry_button" type="Button" parent="."]
+offset_left = 360.0
+offset_top = 522.0
+offset_right = 543.0
+offset_bottom = 584.0
+text = "Retry"
+
 [node name="SadSong" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_oxa5o")
 autoplay = true
@@ -153,3 +160,4 @@ stream = ExtResource("5_y0qtt")
 
 [connection signal="pressed" from="MainMenuBtn" to="." method="_on_main_menu_btn_pressed"]
 [connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="retry_button" to="." method="_on_retry_button_pressed"]

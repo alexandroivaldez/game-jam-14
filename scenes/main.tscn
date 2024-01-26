@@ -1,5 +1,6 @@
 [gd_scene load_steps=48 format=3 uid="uid://bbgf43bkxk4e0"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_dempf"]
 [ext_resource type="Texture2D" uid="uid://c6ogve3433cka" path="res://assets/Gray.png" id="1_odhuk"]
 [ext_resource type="PackedScene" uid="uid://3judm1d04x0l" path="res://prefabs/stone_pillar.tscn" id="2_gfmtp"]
 [ext_resource type="PackedScene" uid="uid://h1f3o1eiwj5m" path="res://actors/main_character.tscn" id="3_4q162"]
@@ -394,6 +395,7 @@ speed_scale = 3.0
 frame_0/texture = ExtResource("13_0e2yw")
 
 [node name="Node" type="Node"]
+script = ExtResource("1_dempf")
 
 [node name="BG" type="Node" parent="."]
 
@@ -960,7 +962,7 @@ position = Vector2(671, 1027)
 script = ExtResource("15_2wh1i")
 
 [node name="MainChar" parent="." instance=ExtResource("3_4q162")]
-position = Vector2(141, 145)
+position = Vector2(132, 136)
 collision_mask = 86
 
 [node name="seaTest" parent="." instance=ExtResource("5_8hao6")]
@@ -970,9 +972,10 @@ collision_layer = 0
 script = ExtResource("6_m8du1")
 
 [node name="Camera2D" type="Camera2D" parent="seaTest"]
-position = Vector2(0, -690)
+position = Vector2(0, -687)
 
 [node name="HUD" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="control" type="Control" parent="HUD"]
 layout_mode = 3

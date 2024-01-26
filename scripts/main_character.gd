@@ -11,19 +11,18 @@ const SPEED = 300.0
 @onready var hurt_sound = $hurtSound
 @onready var player_death_sound = $playerDeathSound
 
-
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var knockback_vector := Vector2.ZERO
 var jumpCount := 0
 var direction
 var is_hurted := false
 
+signal player_has_died()
+
 func _physics_process(delta):
-	# Not on ground? Add gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		
-	#moves the character and keeps looking the same side
 	direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -41,12 +40,9 @@ func _physics_process(delta):
 		animation.play("doubleJump")
 		jumpSound.pitch_scale = 1.50
 		
-	# reset jumpCounter.
 	if is_on_floor():
 		jumpCount = 0
 		
-
-	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
 		if jumpCount < 2:
 			jumpSound.play()
@@ -56,13 +52,11 @@ func _physics_process(delta):
 	move_and_slide()
 	_set_state()
 
-	#Handle collision with falling platform
 	for platforms in get_slide_collision_count():
 		var collision = get_slide_collision(platforms)
 		if collision.get_collider().has_method("has_collided_with"):
 			collision.get_collider().has_collided_with(collision, self)
 
-#Handle animations
 func _set_state():
 	var state = "idle"
 	if !is_on_floor() && jumpCount > 1:
@@ -92,7 +86,6 @@ func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
 		Globals.player_life -= 1
 	else:
 		player_death_sound.play()
-		await get_tree().create_timer(.30).timeout
 		queue_free()
 		emit_signal("player_has_died")
 		
