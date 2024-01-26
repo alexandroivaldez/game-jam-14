@@ -276,7 +276,7 @@ script = ExtResource("1_3nvc4")
 texture_filter = 1
 scale = Vector2(2.15625, 2.15625)
 sprite_frames = SubResource("SpriteFrames_js00j")
-animation = &"idle"
+animation = &"run"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
