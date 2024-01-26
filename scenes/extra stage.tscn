@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://mu6eigj54f0g" path="res://assets/woodenSign.png" id="4_ca3px"]
 [ext_resource type="Texture2D" uid="uid://ce6nh04ruxr3p" path="res://assets/woodenSign2.png" id="5_c46m6"]
 [ext_resource type="Texture2D" uid="uid://c05w7rggkobpo" path="res://assets/Tile-Sets (64-64).png" id="6_xj78s"]
-[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/tileset.png" id="7_qsivt"]
+[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/Tileset_SpreadingSeas/tileset.png" id="7_qsivt"]
 [ext_resource type="PackedScene" uid="uid://h1f3o1eiwj5m" path="res://actors/main_character.tscn" id="8_wuc6f"]
 [ext_resource type="PackedScene" uid="uid://cpq671wsvl6cp" path="res://prefabs/platform_enemy.tscn" id="9_hiymq"]
 [ext_resource type="PackedScene" uid="uid://dvtf73620rohj" path="res://prefabs/seaTest.tscn" id="10_u07w1"]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://3judm1d04x0l" path="res://prefabs/stone_pillar.tscn" id="2_gfmtp"]
 [ext_resource type="PackedScene" uid="uid://h1f3o1eiwj5m" path="res://actors/main_character.tscn" id="3_4q162"]
 [ext_resource type="PackedScene" uid="uid://dvtf73620rohj" path="res://prefabs/seaTest.tscn" id="5_8hao6"]
-[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/tileset.png" id="5_awg2k"]
+[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/Tileset_SpreadingSeas/tileset.png" id="5_awg2k"]
 [ext_resource type="Script" path="res://scripts/seaTest.gd" id="6_m8du1"]
 [ext_resource type="PackedScene" uid="uid://b6046xjej8e3s" path="res://prefabs/coin.tscn" id="7_1ws71"]
 [ext_resource type="PackedScene" uid="uid://cf3pdo5kjmy3t" path="res://prefabs/moving_platform.tscn" id="8_oieha"]

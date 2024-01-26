@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://b7yclhajnni5d"]
 
 [ext_resource type="Script" path="res://scripts/mainMenu.gd" id="1_0148i"]
-[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/tileset.png" id="2_12kt1"]
+[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/Tileset_SpreadingSeas/tileset.png" id="2_12kt1"]
 [ext_resource type="PackedScene" uid="uid://dvtf73620rohj" path="res://prefabs/seaTest.tscn" id="2_34hgt"]
 [ext_resource type="Texture2D" uid="uid://buo8cbxgsn7no" path="res://assets/menu/cooltext451192130461030.png" id="3_kxmum"]
 [ext_resource type="AudioStream" uid="uid://55280kypmvbr" path="res://sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3" id="4_rva3f"]

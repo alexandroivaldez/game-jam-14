@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://m2balqrloxew" path="res://assets/main-character/player_hurt(64x64).png" id="1_826gi"]
 [ext_resource type="Script" path="res://scripts/drowned_scene.gd" id="1_uohi8"]
 [ext_resource type="PackedScene" uid="uid://dvtf73620rohj" path="res://prefabs/seaTest.tscn" id="2_ie8n7"]
-[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/tileset.png" id="2_ua5x0"]
+[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/Tileset_SpreadingSeas/tileset.png" id="2_ua5x0"]
 [ext_resource type="AudioStream" uid="uid://dve17yqpduw4h" path="res://sounds/zapsplat_horror_accent_ghostly_depressing_sad_eerie_001_57848.mp3" id="4_oxa5o"]
 [ext_resource type="AudioStream" uid="uid://55280kypmvbr" path="res://sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3" id="5_y0qtt"]
 
