@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dw2u5g061nci0"]
 
 [ext_resource type="PackedScene" uid="uid://h1f3o1eiwj5m" path="res://actors/main_character.tscn" id="1_6rsej"]
-[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/tileset.png" id="1_cls3d"]
+[ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/Tileset_SpreadingSeas/tileset.png" id="1_cls3d"]
 [ext_resource type="PackedScene" uid="uid://xmpex08obkk6" path="res://prefabs/falling_platform.tscn" id="4_63ixf"]
 [ext_resource type="PackedScene" uid="uid://qstbd14m2rdb" path="res://prefabs/break_box.tscn" id="4_vc7sm"]
 [ext_resource type="PackedScene" uid="uid://dr07ibdx8nx5t" path="res://prefabs/spikes.tscn" id="5_h4prx"]
