@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://vf5y5t3432ue"]
+
+[ext_resource type="PackedScene" uid="uid://dr07ibdx8nx5t" path="res://prefabs/spikes.tscn" id="1_k75mx"]
+[ext_resource type="Texture2D" uid="uid://ck7cj2410hj6f" path="res://assets/Tileset_SpreadingSeas/spikes_r.png" id="2_yhkua"]
+
+[node name="spikes" instance=ExtResource("1_k75mx")]
+
+[node name="collision" parent="." index="0"]
+position = Vector2(30.4, 8.4)
+scale = Vector2(1, 1)
+
+[node name="spikes" parent="." index="1"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_yhkua")
+centered = false
+region_rect = Rect2(2, 51, 60, 21)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bbgf43bkxk4e0"]
+[gd_scene load_steps=48 format=3 uid="uid://bbgf43bkxk4e0"]
 
 [ext_resource type="Texture2D" uid="uid://c6ogve3433cka" path="res://assets/Gray.png" id="1_odhuk"]
 [ext_resource type="PackedScene" uid="uid://3judm1d04x0l" path="res://prefabs/stone_pillar.tscn" id="2_gfmtp"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://dt7t8e5rl5w6n" path="res://prefabs/gem_game_start.tscn" id="14_0dhds"]
 [ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://assets/main-character/Jump (32x32).png" id="14_b57u7"]
 [ext_resource type="Script" path="res://scripts/gem_game_start.gd" id="15_2wh1i"]
-[ext_resource type="PackedScene" uid="uid://dr07ibdx8nx5t" path="res://prefabs/spikes.tscn" id="15_ruy38"]
 [ext_resource type="PackedScene" uid="uid://dn8xavai03itc" path="res://prefabs/water_pipe.tscn" id="16_fhblx"]
 [ext_resource type="Texture2D" uid="uid://mu6eigj54f0g" path="res://assets/woodenSign.png" id="21_ddeel"]
 [ext_resource type="PackedScene" uid="uid://b1wnmbjfjj454" path="res://prefabs/seagull_patrol.tscn" id="22_lajx0"]
@@ -27,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://dln5k6816jn7g" path="res://prefabs/pause_menu.tscn" id="26_odwfq"]
 [ext_resource type="PackedScene" uid="uid://b0bj06hlw77p2" path="res://prefabs/score.tscn" id="27_57rya"]
 [ext_resource type="PackedScene" uid="uid://pwm6dseyxxs3" path="res://prefabs/goal.tscn" id="28_s7xg8"]
+[ext_resource type="PackedScene" uid="uid://vf5y5t3432ue" path="res://prefabs/spikes_right.tscn" id="29_ddye1"]
+[ext_resource type="PackedScene" uid="uid://bwlufiy4uv1l8" path="res://prefabs/spikes_left.tscn" id="29_n8kme"]
 [ext_resource type="AudioStream" uid="uid://b61rug74q3k5k" path="res://sounds/Old RuneScape Soundtrack_ Sea Shanty2.mp3" id="29_pf5tm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57v6i"]
@@ -648,86 +649,6 @@ position = Vector2(296, -14696)
 
 [node name="spikes" type="Node" parent="."]
 
-[node name="spikes" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(760, -2368)
-rotation = -1.57079
-
-[node name="spikes2" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(760, -2512)
-rotation = -1.57079
-
-[node name="spikes8" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(566, -3952)
-rotation = -1.57079
-
-[node name="spikes9" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(500, -4456)
-rotation = -1.57079
-
-[node name="spikes10" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(566, -4720)
-rotation = -1.57079
-
-[node name="spikes11" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(566, -4976)
-rotation = -1.57079
-
-[node name="spikes12" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(568, -5120)
-rotation = -1.57079
-
-[node name="spikes13" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(511, -5272)
-rotation = -1.57079
-
-[node name="spikes14" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(511, -5408)
-rotation = -1.57079
-
-[node name="spikes15" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(511, -5544)
-rotation = -1.57079
-
-[node name="spikes16" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(511, -5680)
-rotation = -1.57079
-
-[node name="spikes17" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(384, -5272)
-rotation = 1.57079
-
-[node name="spikes18" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(384, -5408)
-rotation = 1.57079
-
-[node name="spikes19" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(384, -5544)
-rotation = 1.57079
-
-[node name="spikes20" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(384, -5680)
-rotation = 1.57079
-
-[node name="spikes3" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(584, -2500)
-rotation = 1.57079
-
-[node name="spikes4" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(328, -4080)
-rotation = 1.57079
-
-[node name="spikes5" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(328, -4336)
-rotation = 1.57079
-
-[node name="spikes6" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(392, -4840)
-rotation = 1.57079
-
-[node name="spikes7" parent="spikes" instance=ExtResource("15_ruy38")]
-position = Vector2(384, -5112)
-rotation = 1.57079
-
 [node name="platforms" type="Node" parent="."]
 
 [node name="MovingPlatform" parent="platforms" instance=ExtResource("8_oieha")]
@@ -1199,6 +1120,111 @@ collision_layer = 2
 [node name="level_song" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_pf5tm")
 autoplay = true
+
+[node name="spikes2" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(563, -3906)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes13" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(755, -2498)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes14" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(755, -2370)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes12" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(499, -4418)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes15" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(563, -4674)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes16" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(563, -4930)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes17" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(563, -5122)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes19" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(499, -5250)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes20" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(499, -5378)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes21" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(499, -5506)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes22" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(499, -5634)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes18" parent="." instance=ExtResource("29_n8kme")]
+position = Vector2(563, -5058)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes3" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(333, -4094)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes11" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(589, -2558)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes4" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(333, -4350)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes5" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(397, -4862)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes6" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5118)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes7" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5310)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes8" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5438)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes9" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5566)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes10" parent="." instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5694)
+rotation = 1.5708
+scale = Vector2(1, 1)
 
 [connection signal="body_entered" from="gem_game-start" to="BG/WaterPipe" method="_on_gem_gamestart_body_entered"]
 [connection signal="body_entered" from="gem_game-start" to="BG/StonePillar" method="_on_gem_gamestart_body_entered"]
