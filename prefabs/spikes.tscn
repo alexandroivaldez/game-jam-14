@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dr07ibdx8nx5t"]
 
 [ext_resource type="Script" path="res://scripts/spikes.gd" id="1_ht6h5"]
-[ext_resource type="Texture2D" uid="uid://chtxpxnwhyop" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Spike.png" id="1_xgv51"]
+[ext_resource type="Texture2D" uid="uid://nqunt0b4mxp4" path="res://assets/Tileset_SpreadingSeas/spikes(64x64).png" id="2_cmk1s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aeqof"]
 size = Vector2(6.4, 9.6)
@@ -17,6 +17,7 @@ shape = SubResource("RectangleShape2D_aeqof")
 
 [node name="spikes" type="Sprite2D" parent="."]
 texture_repeat = 2
-texture = ExtResource("1_xgv51")
+texture = ExtResource("2_cmk1s")
+offset = Vector2(0, -24)
 region_enabled = true
-region_rect = Rect2(0, 8, 56, 8)
+region_rect = Rect2(0, 0, 64, 64)
