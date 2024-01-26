@@ -95,6 +95,7 @@ func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
 		await get_tree().create_timer(.30).timeout
 		queue_free()
 		emit_signal("player_has_died")
+		
 	if knockback_force != Vector2.ZERO:
 		knockback_vector = knockback_force
 		var knockback_tween := get_tree().create_tween()

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bi2awwwdypw0e"]
+
+[node name="drowned_scene" type="CanvasLayer"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 403.0
+offset_top = 558.0
+offset_right = 528.0
+offset_bottom = 593.0
+text = "You drowned..."
