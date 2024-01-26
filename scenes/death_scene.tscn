@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs6y6fwqchma6"]
+
+[ext_resource type="Script" path="res://scenes/death_scene.gd" id="1_cyuwu"]
+[ext_resource type="Texture2D" uid="uid://m2balqrloxew" path="res://assets/main-character/player_hurt(64x64).png" id="2_y3k58"]
+[ext_resource type="AudioStream" uid="uid://dve17yqpduw4h" path="res://sounds/zapsplat_horror_accent_ghostly_depressing_sad_eerie_001_57848.mp3" id="3_dw6v3"]
+[ext_resource type="AudioStream" uid="uid://55280kypmvbr" path="res://sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3" id="4_sp8hn"]
+
+[node name="deathscene" type="Node"]
+script = ExtResource("1_cyuwu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(417, 780)
+rotation = -1.5708
+scale = Vector2(4, 4)
+texture = ExtResource("2_y3k58")
+
+[node name="SadSong" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dw6v3")
+autoplay = true
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_sp8hn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0.670588, 0.0823529, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -299.0
+offset_right = -77.0
+offset_bottom = -276.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "You died..."
+
+[node name="MainMenu" type="Button" parent="."]
+offset_left = 101.0
+offset_top = 492.0
+offset_right = 283.0
+offset_bottom = 588.0
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 563.0
+offset_top = 489.0
+offset_right = 742.0
+offset_bottom = 583.0
+text = "Quit"
+
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

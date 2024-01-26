@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node
 @onready var button_click = $ButtonClick
 
 
@@ -12,7 +12,7 @@ func _process(delta):
 	pass
 
 
-func _on_main_menu_btn_pressed():
+func _on_main_menu_pressed():
 	Globals.coins = 0
 	Globals.score = 0
 	Globals.player_life = 3
@@ -21,7 +21,8 @@ func _on_main_menu_btn_pressed():
 	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")
 
 
-func _on_quit_btn_pressed():
+func _on_quit_pressed():
 	button_click.play()
 	await get_tree().create_timer(.30).timeout
 	get_tree().quit()
+	
