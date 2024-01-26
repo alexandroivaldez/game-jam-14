@@ -55,10 +55,18 @@ text = "Main Menu"
 
 [node name="Quit" type="Button" parent="."]
 offset_left = 563.0
-offset_top = 489.0
+offset_top = 492.0
 offset_right = 742.0
-offset_bottom = 583.0
+offset_bottom = 586.0
 text = "Quit"
+
+[node name="Retry" type="Button" parent="."]
+offset_left = 334.0
+offset_top = 492.0
+offset_right = 513.0
+offset_bottom = 586.0
+text = "Retry"
 
 [connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
