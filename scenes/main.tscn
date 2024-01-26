@@ -466,7 +466,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("21_ddeel")
 
 [node name="Sign2" type="Sprite2D" parent="BG"]
-position = Vector2(799, 1024)
+position = Vector2(510, 1024)
 scale = Vector2(2, 2)
 texture = ExtResource("22_wpi2u")
 
