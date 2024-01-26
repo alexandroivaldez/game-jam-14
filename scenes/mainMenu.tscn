@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/mainMenu.gd" id="1_0148i"]
 [ext_resource type="Texture2D" uid="uid://bpfgjooveo4ti" path="res://assets/Tileset_SpreadingSeas/tileset.png" id="2_12kt1"]
 [ext_resource type="PackedScene" uid="uid://dvtf73620rohj" path="res://prefabs/seaTest.tscn" id="2_34hgt"]
-[ext_resource type="Texture2D" uid="uid://buo8cbxgsn7no" path="res://assets/menu/cooltext451192130461030.png" id="3_kxmum"]
 [ext_resource type="AudioStream" uid="uid://55280kypmvbr" path="res://sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3" id="4_rva3f"]
+[ext_resource type="Texture2D" uid="uid://mqq3mvi0ahg7" path="res://assets/menu/cooltext_pixelized.png" id="4_tmd7m"]
 [ext_resource type="PackedScene" uid="uid://cpq671wsvl6cp" path="res://prefabs/platform_enemy.tscn" id="6_eybqj"]
 [ext_resource type="AudioStream" uid="uid://d2qlm38j7qxdf" path="res://sounds/Spreading_Seas_-_Menu_V1.1.wav" id="6_vq0hj"]
 [ext_resource type="PackedScene" uid="uid://h1f3o1eiwj5m" path="res://actors/main_character.tscn" id="7_1dw8y"]
@@ -386,7 +386,7 @@ offset_right = 383.0
 offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_kxmum")
+texture = ExtResource("4_tmd7m")
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8
