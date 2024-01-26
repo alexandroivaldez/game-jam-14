@@ -101,7 +101,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 1.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -165,9 +165,9 @@ script = ExtResource("1_3nvc4")
 [node name="anim" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_js00j")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.884782
+frame_progress = 0.325638
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 7)

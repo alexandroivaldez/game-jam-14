@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsngfvowbkixh"]
+[gd_scene load_steps=5 format=3 uid="uid://dsngfvowbkixh"]
 
-[ext_resource type="Script" path="res://scenes/death_scene.gd" id="1_pvkms"]
+[ext_resource type="Script" path="res://death_scene.gd" id="1_pvkms"]
 [ext_resource type="Texture2D" uid="uid://m2balqrloxew" path="res://assets/main-character/player_hurt(64x64).png" id="1_qyn01"]
 [ext_resource type="AudioStream" uid="uid://55280kypmvbr" path="res://sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3" id="3_7cui1"]
+[ext_resource type="AudioStream" uid="uid://dlwi2x2bmek0g" path="res://sounds/zapsplat_horror_accent_ghostly_depressing_sad_eerie_001_57848.mp3" id="4_08sbv"]
 
 [node name="DeathScene" type="CanvasLayer"]
 script = ExtResource("1_pvkms")
@@ -70,6 +71,10 @@ texture = ExtResource("1_qyn01")
 
 [node name="ButtonClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_7cui1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_08sbv")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
