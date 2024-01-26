@@ -27,8 +27,7 @@ func _physics_process(delta):
 	direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
-		#remove (* 2.156) fix rescaling back to 1
-		animation.scale.x = direction * 2.156
+		animation.scale.x = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if knockback_vector != Vector2.ZERO:
