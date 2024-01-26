@@ -1095,7 +1095,6 @@ script = ExtResource("6_m8du1")
 position = Vector2(0, -687)
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="control" type="Control" parent="HUD"]
 layout_mode = 3
