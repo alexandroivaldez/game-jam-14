@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsngfvowbkixh"]
+
+[ext_resource type="Script" path="res://scenes/death_scene.gd" id="1_pvkms"]
+[ext_resource type="Texture2D" uid="uid://m2balqrloxew" path="res://assets/main-character/player_hurt(64x64).png" id="1_qyn01"]
+[ext_resource type="AudioStream" uid="uid://55280kypmvbr" path="res://sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3" id="3_7cui1"]
+
+[node name="DeathScene" type="CanvasLayer"]
+script = ExtResource("1_pvkms")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = 46.0
+offset_right = -154.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Retry"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 167.0
+offset_top = 48.0
+offset_right = 283.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0.694118, 0.00392157, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -393.0
+offset_right = -112.0
+offset_bottom = -369.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "You died..."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(420, 517)
+rotation = 4.7281
+scale = Vector2(4, 4)
+texture = ExtResource("1_qyn01")
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7cui1")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

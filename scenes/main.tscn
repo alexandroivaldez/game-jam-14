@@ -6129,7 +6129,7 @@ scale = Vector2(1.5, 1.5)
 metadata/_edit_group_ = true
 
 [node name="gem_game-start" parent="." instance=ExtResource("14_0dhds")]
-position = Vector2(671, 1027)
+position = Vector2(674, 1028)
 script = ExtResource("15_2wh1i")
 
 [node name="MainChar" parent="." instance=ExtResource("3_4q162")]
@@ -6146,7 +6146,6 @@ script = ExtResource("6_m8du1")
 position = Vector2(0, -690)
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="control" type="Control" parent="HUD"]
 layout_mode = 3
