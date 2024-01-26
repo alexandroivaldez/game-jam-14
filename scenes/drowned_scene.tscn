@@ -1,10 +1,71 @@
-[gd_scene format=3 uid="uid://bi2awwwdypw0e"]
+[gd_scene load_steps=6 format=3 uid="uid://bi2awwwdypw0e"]
+
+[ext_resource type="Texture2D" uid="uid://m2balqrloxew" path="res://assets/main-character/player_hurt(64x64).png" id="1_826gi"]
+[ext_resource type="Script" path="res://scripts/drowned_scene.gd" id="1_uohi8"]
+[ext_resource type="PackedScene" uid="uid://dvtf73620rohj" path="res://prefabs/seaTest.tscn" id="2_ie8n7"]
+[ext_resource type="AudioStream" uid="uid://dve17yqpduw4h" path="res://sounds/zapsplat_horror_accent_ghostly_depressing_sad_eerie_001_57848.mp3" id="4_oxa5o"]
+[ext_resource type="AudioStream" uid="uid://55280kypmvbr" path="res://sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3" id="5_y0qtt"]
 
 [node name="drowned_scene" type="CanvasLayer"]
+script = ExtResource("1_uohi8")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 403.0
-offset_top = 558.0
-offset_right = 528.0
-offset_bottom = 593.0
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0.211765, 0.54902, 1, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -223.0
+offset_right = -119.0
+offset_bottom = -198.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "You drowned..."
+scroll_active = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(440, 818)
+rotation = 3.82925
+scale = Vector2(4, 4)
+texture = ExtResource("1_826gi")
+
+[node name="Area2D" parent="." instance=ExtResource("2_ie8n7")]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(442, 954)
+
+[node name="MainMenuBtn" type="Button" parent="."]
+offset_left = 98.0
+offset_top = 526.0
+offset_right = 281.0
+offset_bottom = 585.0
+text = "Main Menu"
+
+[node name="QuitBtn" type="Button" parent="."]
+offset_left = 604.0
+offset_top = 522.0
+offset_right = 787.0
+offset_bottom = 584.0
+text = "Quit"
+
+[node name="SadSong" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_oxa5o")
+autoplay = true
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_y0qtt")
+
+[connection signal="pressed" from="MainMenuBtn" to="." method="_on_main_menu_btn_pressed"]
+[connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]
