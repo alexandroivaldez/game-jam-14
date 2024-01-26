@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
 var movePillar = false
-var speed = 50
+var speed = 128
 var pillarCount = 0
 
 func _ready():
