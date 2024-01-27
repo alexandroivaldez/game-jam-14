@@ -87,7 +87,7 @@ autoplay = "default"
 frame_progress = 0.685895
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1.5)
+position = Vector2(0, 56)
 shape = SubResource("RectangleShape2D_ax5ij")
 
 [node name="PlayerDeath" type="AudioStreamPlayer2D" parent="."]
