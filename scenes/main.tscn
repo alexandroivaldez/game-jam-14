@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://b1wnmbjfjj454" path="res://prefabs/seagull_patrol.tscn" id="22_lajx0"]
 [ext_resource type="Texture2D" uid="uid://ce6nh04ruxr3p" path="res://assets/woodenSign2.png" id="22_wpi2u"]
 [ext_resource type="PackedScene" uid="uid://qstbd14m2rdb" path="res://prefabs/break_box.tscn" id="25_1qwcf"]
-[ext_resource type="Texture2D" uid="uid://bocn162n3r6bh" path="res://assets/main-character/player_run(64x64).png" id="25_r3v0j"]
+[ext_resource type="Texture2D" uid="uid://bo4cckjv4kmxc" path="res://assets/main-character/Player_life.png" id="25_yld3j"]
 [ext_resource type="PackedScene" uid="uid://dln5k6816jn7g" path="res://prefabs/pause_menu.tscn" id="26_odwfq"]
 [ext_resource type="PackedScene" uid="uid://b0bj06hlw77p2" path="res://prefabs/score.tscn" id="27_57rya"]
 [ext_resource type="PackedScene" uid="uid://pwm6dseyxxs3" path="res://prefabs/goal.tscn" id="28_s7xg8"]
@@ -1096,17 +1096,17 @@ position = Vector2(671, 1027)
 script = ExtResource("15_2wh1i")
 
 [node name="MainChar" parent="." instance=ExtResource("3_4q162")]
-position = Vector2(464, -2820)
+position = Vector2(128, -32)
 collision_mask = 86
-
-[node name="Camera2D" type="Camera2D" parent="MainChar"]
-position = Vector2(52, 180)
 
 [node name="seaTest" parent="." instance=ExtResource("5_8hao6")]
 modulate = Color(1, 1, 1, 0.737255)
 position = Vector2(449, 1455)
 collision_layer = 0
 script = ExtResource("6_m8du1")
+
+[node name="Camera2D" type="Camera2D" parent="seaTest"]
+position = Vector2(0, -687)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -1180,7 +1180,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
-texture = ExtResource("25_r3v0j")
+texture = ExtResource("25_yld3j")
 
 [node name="life_counter" type="Label" parent="HUD/control/container/life_container"]
 layout_mode = 2
