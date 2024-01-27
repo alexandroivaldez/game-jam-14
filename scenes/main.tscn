@@ -455,6 +455,7 @@ texture = ExtResource("22_wpi2u")
 
 [node name="StonePillar" parent="BG" instance=ExtResource("2_gfmtp")]
 position = Vector2(671, 1126)
+scale = Vector2(1, 1)
 metadata/_edit_group_ = true
 
 [node name="TileMap2" type="TileMap" parent="BG"]
@@ -1005,7 +1006,7 @@ scale = Vector2(1.5, 1.5)
 metadata/_edit_group_ = true
 
 [node name="gem_game-start" parent="." instance=ExtResource("14_0dhds")]
-position = Vector2(671, 1027)
+position = Vector2(671, 1009)
 script = ExtResource("15_2wh1i")
 
 [node name="MainChar" parent="." instance=ExtResource("3_4q162")]
