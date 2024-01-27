@@ -7,7 +7,7 @@ func _ready():
 	main_char.player_has_died.connect(load_death_scene)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func load_death_scene():

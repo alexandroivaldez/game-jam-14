@@ -8,14 +8,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 func _on_main_menu_btn_pressed():
-	Globals.coins = 0
-	Globals.score = 0
-	Globals.player_life = 3
 	button_click.play()
 	await get_tree().create_timer(0.30).timeout
 	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")
@@ -28,5 +25,8 @@ func _on_quit_btn_pressed():
 
 
 func _on_retry_button_pressed():
+	Globals.coins = 0
+	Globals.score = 0
+	Globals.player_life = 3
 	await get_tree().create_timer(0.25).timeout
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
