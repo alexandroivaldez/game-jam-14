@@ -1029,7 +1029,7 @@ scale = Vector2(1.5, 1.5)
 metadata/_edit_group_ = true
 
 [node name="PlatformEnemy6" parent="enemies" instance=ExtResource("10_pd1bl")]
-position = Vector2(681, -1456)
+position = Vector2(678, -1433)
 scale = Vector2(1.5, 1.5)
 metadata/_edit_group_ = true
 
