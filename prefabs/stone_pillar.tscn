@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://3judm1d04x0l"]
 
-[ext_resource type="Texture2D" uid="uid://ds3pb7hi5eott" path="res://assets/stone-pillar.png" id="1_hlvnu"]
 [ext_resource type="Script" path="res://scripts/stone_pillar.gd" id="1_rbvds"]
+[ext_resource type="Texture2D" uid="uid://crrwjc8epsswo" path="res://assets/Tileset_SpreadingSeas/pillar.png" id="2_n4uap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jesqj"]
-size = Vector2(58, 64)
+size = Vector2(190, 191.2)
 
 [node name="StonePillar" type="AnimatableBody2D"]
 scale = Vector2(2.5, 2.5)
@@ -12,7 +12,9 @@ collision_layer = 2
 script = ExtResource("1_rbvds")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hlvnu")
+texture = ExtResource("2_n4uap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.199995, -0.399988)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jesqj")
