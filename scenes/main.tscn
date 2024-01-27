@@ -684,81 +684,107 @@ scale = Vector2(3, 3)
 
 [node name="falling-platform" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(128, -101)
+scale = Vector2(1, 1)
 
 [node name="falling-platform2" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(551, -1978)
+scale = Vector2(1, 1)
 
 [node name="falling-platform3" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(664, -2216)
+scale = Vector2(1, 1)
 
 [node name="falling-platform4" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(664, -2352)
+scale = Vector2(1, 1)
 
 [node name="falling-platform5" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(663, -2480)
+scale = Vector2(1, 1)
 
 [node name="falling-platform6" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(664, -2600)
+scale = Vector2(1, 1)
 
 [node name="falling-platform7" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(408, -3112)
+scale = Vector2(1, 1)
 
 [node name="falling-platform8" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(608, -3240)
+scale = Vector2(1, 1)
 
 [node name="falling-platform9" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(288, -3368)
+scale = Vector2(1, 1)
 
 [node name="falling-platform10" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(539, -3496)
+scale = Vector2(1, 1)
 
 [node name="falling-platform11" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(680, -3560)
+scale = Vector2(1, 1)
 
 [node name="falling-platform12" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(450, -5164)
+scale = Vector2(1, 1)
 
 [node name="falling-platform13" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(450, -5296)
+scale = Vector2(1, 1)
 
 [node name="falling-platform14" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(450, -5416)
+scale = Vector2(1, 1)
 
 [node name="falling-platform15" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(450, -5544)
+scale = Vector2(1, 1)
 
 [node name="falling-platform16" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(450, -5672)
+scale = Vector2(1, 1)
 
 [node name="falling-platform17" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(233, -10923)
+scale = Vector2(1, 1)
 
 [node name="falling-platform18" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(663, -11051)
+scale = Vector2(1, 1)
 
 [node name="falling-platform19" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(233, -11179)
+scale = Vector2(1, 1)
 
 [node name="falling-platform20" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(663, -11307)
+scale = Vector2(1, 1)
 
 [node name="falling-platform21" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(352, -14248)
+scale = Vector2(1, 1)
 
 [node name="falling-platform22" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(600, -14376)
+scale = Vector2(1, 1)
 
 [node name="falling-platform23" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(204, -14440)
+scale = Vector2(1, 1)
 
 [node name="falling-platform26" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(440, -14504)
+scale = Vector2(1, 1)
 
 [node name="falling-platform24" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(672, -14576)
+scale = Vector2(1, 1)
 
 [node name="falling-platform25" parent="platforms" instance=ExtResource("9_p7jwn")]
 position = Vector2(296, -14632)
+scale = Vector2(1, 1)
 
 [node name="moving-platforms" type="Node" parent="."]
 
