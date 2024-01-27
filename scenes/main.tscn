@@ -17,13 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/Mini FX, Items & UI/Coin-Sprites/00_Coin-Sprites.png" id="13_0e2yw"]
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="13_wnah2"]
 [ext_resource type="PackedScene" uid="uid://dt7t8e5rl5w6n" path="res://prefabs/gem_game_start.tscn" id="14_0dhds"]
-[ext_resource type="Texture2D" uid="uid://bkh3fxkpmxjnr" path="res://assets/main-character/Jump (32x32).png" id="14_b57u7"]
 [ext_resource type="Script" path="res://scripts/gem_game_start.gd" id="15_2wh1i"]
 [ext_resource type="PackedScene" uid="uid://dn8xavai03itc" path="res://prefabs/water_pipe.tscn" id="16_fhblx"]
 [ext_resource type="Texture2D" uid="uid://mu6eigj54f0g" path="res://assets/woodenSign.png" id="21_ddeel"]
 [ext_resource type="PackedScene" uid="uid://b1wnmbjfjj454" path="res://prefabs/seagull_patrol.tscn" id="22_lajx0"]
 [ext_resource type="Texture2D" uid="uid://ce6nh04ruxr3p" path="res://assets/woodenSign2.png" id="22_wpi2u"]
 [ext_resource type="PackedScene" uid="uid://qstbd14m2rdb" path="res://prefabs/break_box.tscn" id="25_1qwcf"]
+[ext_resource type="Texture2D" uid="uid://bocn162n3r6bh" path="res://assets/main-character/player_run(64x64).png" id="25_r3v0j"]
 [ext_resource type="PackedScene" uid="uid://dln5k6816jn7g" path="res://prefabs/pause_menu.tscn" id="26_odwfq"]
 [ext_resource type="PackedScene" uid="uid://b0bj06hlw77p2" path="res://prefabs/score.tscn" id="27_57rya"]
 [ext_resource type="PackedScene" uid="uid://pwm6dseyxxs3" path="res://prefabs/goal.tscn" id="28_s7xg8"]
@@ -367,27 +367,35 @@ texture_region_size = Vector2i(64, 64)
 0:18/0 = 0
 0:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:18/0/physics_layer_0/angular_velocity = 0.0
+0:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -14.5, -32, -14)
 1:18/0 = 0
 1:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:18/0/physics_layer_0/angular_velocity = 0.0
+1:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:18/0 = 0
 2:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:18/0/physics_layer_0/angular_velocity = 0.0
+2:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 3:18/0 = 0
 3:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:18/0/physics_layer_0/angular_velocity = 0.0
+3:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:19/0 = 0
 0:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:19/0/physics_layer_0/angular_velocity = 0.0
+0:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:19/0 = 0
 1:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:19/0/physics_layer_0/angular_velocity = 0.0
+1:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:19/0 = 0
 2:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:19/0/physics_layer_0/angular_velocity = 0.0
+2:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 3:19/0 = 0
 3:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:19/0/physics_layer_0/angular_velocity = 0.0
+3:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_v47ga"]
 tile_size = Vector2i(64, 64)
@@ -671,6 +679,111 @@ position = Vector2(671, -14632)
 position = Vector2(296, -14696)
 
 [node name="spikes" type="Node" parent="."]
+
+[node name="spikes2" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(563, -3906)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes13" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(755, -2498)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes14" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(755, -2370)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes12" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(499, -4418)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes15" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(563, -4674)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes16" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(563, -4930)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes17" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(563, -5122)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes19" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(499, -5250)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes20" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(499, -5378)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes21" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(499, -5506)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes22" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(499, -5634)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes18" parent="spikes" instance=ExtResource("29_n8kme")]
+position = Vector2(563, -5058)
+rotation = -1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes3" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(333, -4094)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes11" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(589, -2558)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes4" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(333, -4350)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes5" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(397, -4862)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes6" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5118)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes7" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5310)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes8" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5438)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes9" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5566)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="spikes10" parent="spikes" instance=ExtResource("29_ddye1")]
+position = Vector2(397, -5694)
+rotation = 1.5708
+scale = Vector2(1, 1)
 
 [node name="platforms" type="Node" parent="."]
 
@@ -983,8 +1096,11 @@ position = Vector2(671, 1027)
 script = ExtResource("15_2wh1i")
 
 [node name="MainChar" parent="." instance=ExtResource("3_4q162")]
-position = Vector2(132, 136)
+position = Vector2(464, -2820)
 collision_mask = 86
+
+[node name="Camera2D" type="Camera2D" parent="MainChar"]
+position = Vector2(52, 180)
 
 [node name="seaTest" parent="." instance=ExtResource("5_8hao6")]
 modulate = Color(1, 1, 1, 0.737255)
@@ -992,11 +1108,7 @@ position = Vector2(449, 1455)
 collision_layer = 0
 script = ExtResource("6_m8du1")
 
-[node name="Camera2D" type="Camera2D" parent="seaTest"]
-position = Vector2(0, -687)
-
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="control" type="Control" parent="HUD"]
 layout_mode = 3
@@ -1068,7 +1180,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
-texture = ExtResource("14_b57u7")
+texture = ExtResource("25_r3v0j")
 
 [node name="life_counter" type="Label" parent="HUD/control/container/life_container"]
 layout_mode = 2
@@ -1144,111 +1256,6 @@ collision_layer = 2
 [node name="level_song" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_pf5tm")
 autoplay = true
-
-[node name="spikes2" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(563, -3906)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes13" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(755, -2498)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes14" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(755, -2370)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes12" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(499, -4418)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes15" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(563, -4674)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes16" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(563, -4930)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes17" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(563, -5122)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes19" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(499, -5250)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes20" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(499, -5378)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes21" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(499, -5506)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes22" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(499, -5634)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes18" parent="." instance=ExtResource("29_n8kme")]
-position = Vector2(563, -5058)
-rotation = -1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes3" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(333, -4094)
-rotation = 1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes11" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(589, -2558)
-rotation = 1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes4" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(333, -4350)
-rotation = 1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes5" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(397, -4862)
-rotation = 1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes6" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(397, -5118)
-rotation = 1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes7" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(397, -5310)
-rotation = 1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes8" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(397, -5438)
-rotation = 1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes9" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(397, -5566)
-rotation = 1.5708
-scale = Vector2(1, 1)
-
-[node name="spikes10" parent="." instance=ExtResource("29_ddye1")]
-position = Vector2(397, -5694)
-rotation = 1.5708
-scale = Vector2(1, 1)
 
 [connection signal="body_entered" from="gem_game-start" to="BG/WaterPipe" method="_on_gem_gamestart_body_entered"]
 [connection signal="body_entered" from="gem_game-start" to="BG/StonePillar" method="_on_gem_gamestart_body_entered"]

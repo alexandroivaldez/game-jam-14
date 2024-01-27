@@ -79,7 +79,7 @@ func _on_hurtbox_body_entered(_body):
 func _on_hurtbox_area_entered(_area):
 	take_damage(Vector2(0, -400))
 
-func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
+func take_damage(knockback_force := Vector2.ZERO, duration := 0.3):
 	
 	if Globals.player_life > 0:
 		hurt_sound.play()

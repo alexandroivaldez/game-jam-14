@@ -148,10 +148,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cdg3"]
-size = Vector2(35, 44)
+size = Vector2(42, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bfilh"]
-size = Vector2(38, 5)
+size = Vector2(31, 3.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8hqb"]
 size = Vector2(45, 47)
@@ -167,10 +167,10 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_js00j")
 animation = &"run"
 autoplay = "idle"
-frame_progress = 0.884782
+frame_progress = 0.415268
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 7)
+position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_3cdg3")
 
 [node name="head_collider" type="Area2D" parent="."]
@@ -178,18 +178,18 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="collider" type="CollisionShape2D" parent="head_collider"]
-position = Vector2(0, -18)
+position = Vector2(0, -19)
 shape = SubResource("RectangleShape2D_bfilh")
 
 [node name="ray_left" type="RayCast2D" parent="."]
 position = Vector2(0, 8)
-scale = Vector2(1, 7)
+scale = Vector2(1, 9)
 target_position = Vector2(-30, 0)
 collision_mask = 4
 
 [node name="ray_right" type="RayCast2D" parent="."]
 position = Vector2(0, 8)
-scale = Vector2(1, 7)
+scale = Vector2(1, 9)
 target_position = Vector2(30, 0)
 collision_mask = 4
 
@@ -198,7 +198,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="collider" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(1.5, 8.5)
+position = Vector2(0, 8.5)
 shape = SubResource("RectangleShape2D_q8hqb")
 debug_color = Color(0.94902, 0.164706, 0.392157, 0.419608)
 
