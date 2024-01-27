@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://pwm6dseyxxs3" path="res://prefabs/goal.tscn" id="28_s7xg8"]
 [ext_resource type="PackedScene" uid="uid://vf5y5t3432ue" path="res://prefabs/spikes_right.tscn" id="29_ddye1"]
 [ext_resource type="PackedScene" uid="uid://bwlufiy4uv1l8" path="res://prefabs/spikes_left.tscn" id="29_n8kme"]
-[ext_resource type="AudioStream" uid="uid://b61rug74q3k5k" path="res://sounds/Old RuneScape Soundtrack_ Sea Shanty2.mp3" id="29_pf5tm"]
+[ext_resource type="AudioStream" uid="uid://bqlfx15qicg32" path="res://assets/sound/Spreading_Seas_-_Level_Music_Gameplay_Loop_V1.1.wav" id="30_7tjjv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57v6i"]
 texture = ExtResource("5_awg2k")
@@ -1123,7 +1123,7 @@ position = Vector2(671, 1009)
 script = ExtResource("15_2wh1i")
 
 [node name="MainChar" parent="." instance=ExtResource("3_4q162")]
-position = Vector2(121, 96)
+position = Vector2(121, 144)
 collision_mask = 86
 
 [node name="seaTest" parent="." instance=ExtResource("5_8hao6")]
@@ -1133,7 +1133,7 @@ collision_layer = 0
 script = ExtResource("6_m8du1")
 
 [node name="Camera2D" type="Camera2D" parent="seaTest"]
-position = Vector2(0, -711)
+position = Vector2(0, -678)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -1281,7 +1281,7 @@ position = Vector2(704, -15040)
 collision_layer = 2
 
 [node name="level_song" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("29_pf5tm")
+stream = ExtResource("30_7tjjv")
 autoplay = true
 
 [connection signal="body_entered" from="gem_game-start" to="BG/WaterPipe" method="_on_gem_gamestart_body_entered"]
