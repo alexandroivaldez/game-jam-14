@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://xmpex08obkk6"]
 
-[ext_resource type="Texture2D" uid="uid://ggt8agi0xrd" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/falling-platform-brown.png" id="1_6m5td"]
 [ext_resource type="Script" path="res://scripts/falling_platform.gd" id="1_s27vi"]
+[ext_resource type="Texture2D" path="res://assets/Tileset_SpreadingSeas/falling_block_small.png" id="2_wurrl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65sec"]
-size = Vector2(32.8, 16.8)
+size = Vector2(58.4, 38.8)
 
 [sub_resource type="Animation" id="Animation_evc8d"]
 length = 0.001
@@ -52,10 +52,11 @@ script = ExtResource("1_s27vi")
 [node name="respawn_timer" type="Timer" parent="."]
 
 [node name="texture" type="Sprite2D" parent="."]
-texture = ExtResource("1_6m5td")
+texture = ExtResource("2_wurrl")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7.15255e-07)
+position = Vector2(0.800002, -0.600002)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_65sec")
 one_way_collision = true
 
