@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://xmpex08obkk6"]
 
 [ext_resource type="Script" path="res://scripts/falling_platform.gd" id="1_s27vi"]
-[ext_resource type="Texture2D" path="res://assets/Tileset_SpreadingSeas/falling_block_small.png" id="2_wurrl"]
+[ext_resource type="Texture2D" uid="uid://b4mff3wopfq5f" path="res://assets/Tileset_SpreadingSeas/falling_block_small.png" id="2_wurrl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65sec"]
 size = Vector2(58.4, 38.8)
@@ -56,7 +56,6 @@ texture = ExtResource("2_wurrl")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0.800002, -0.600002)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_65sec")
 one_way_collision = true
 

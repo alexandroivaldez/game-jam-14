@@ -1,20 +1,83 @@
-[gd_scene load_steps=4 format=3 uid="uid://3judm1d04x0l"]
+[gd_scene load_steps=7 format=3 uid="uid://3judm1d04x0l"]
 
 [ext_resource type="Script" path="res://scripts/stone_pillar.gd" id="1_rbvds"]
 [ext_resource type="Texture2D" uid="uid://crrwjc8epsswo" path="res://assets/Tileset_SpreadingSeas/pillar.png" id="2_n4uap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jesqj"]
-size = Vector2(190, 191.2)
+size = Vector2(192, 192)
+
+[sub_resource type="Animation" id="Animation_dlwnk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("collsion:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7jgt3"]
+resource_name = "rise"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("collsion:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sfnel"]
+_data = {
+"RESET": SubResource("Animation_dlwnk"),
+"rise": SubResource("Animation_7jgt3")
+}
 
 [node name="StonePillar" type="AnimatableBody2D"]
-scale = Vector2(2.5, 2.5)
 collision_layer = 2
 script = ExtResource("1_rbvds")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_n4uap")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.199995, -0.399988)
-scale = Vector2(1, 1)
+[node name="collsion" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jesqj")
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sfnel")
+}

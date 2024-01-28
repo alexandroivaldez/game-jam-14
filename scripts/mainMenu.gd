@@ -1,5 +1,10 @@
 extends Node
 @onready var button_click_sound = $ButtonClickSound
+@onready var button = $Button
+
+func _ready():
+	button.grab_focus()
+	
 
 func _on_button_pressed():
 	button_click_sound.play()

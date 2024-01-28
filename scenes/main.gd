@@ -5,6 +5,9 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	main_char.player_has_died.connect(load_death_scene)
+	Globals.coins = 0
+	Globals.score = 0
+	Globals.player_life = 3
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
