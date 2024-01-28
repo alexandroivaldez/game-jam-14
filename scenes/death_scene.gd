@@ -1,10 +1,11 @@
 extends Node
 @onready var button_click = $ButtonClick
+@onready var retry = $Control/Retry
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	retry.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,8 +26,5 @@ func _on_quit_pressed():
 	get_tree().quit()
 	
 func _on_retry_pressed():
-	Globals.coins = 0
-	Globals.score = 0
-	Globals.player_life = 3
 	await get_tree().create_timer(0.25).timeout
 	get_tree().change_scene_to_file("res://scenes/main.tscn")

@@ -16,7 +16,6 @@ func _on_visible_on_screen_notifier_2d_screen_entered():
 
 
 func _on_animated_sprite_2d_animation_finished():
-	Globals.score += enemy_score
-	
 	if animated_sprite_2d.animation == "hurt":
+		Globals.score += enemy_score
 		queue_free()
