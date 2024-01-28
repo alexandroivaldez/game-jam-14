@@ -17,7 +17,6 @@ shape = SubResource("RectangleShape2D_aeqof")
 
 [node name="spikes" type="Sprite2D" parent="."]
 texture_repeat = 2
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_2jyke")
 region_enabled = true
-region_rect = Rect2(0, 26, 64, 64)
+region_rect = Rect2(0, 48, 64, 16)

@@ -7,10 +7,8 @@
 
 [node name="collision" parent="." index="0"]
 position = Vector2(29.6, 8.8)
-scale = Vector2(1, 1)
 
 [node name="spikes" parent="." index="1"]
-scale = Vector2(1, 1)
 texture = ExtResource("2_khqju")
 centered = false
 region_rect = Rect2(2, 51, 60, 20)
