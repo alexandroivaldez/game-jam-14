@@ -7,7 +7,7 @@ In Spreading Seas you play as a pirate who fell down a booby trap after pushing 
 ### Team
 
 - Game Devs: [shimworks](https://github.com/shimworks) 🇧🇷 & [alexandroivaldez](https://github.com/alexandroivaldez) 🇺🇸
-- Artists: [Mothnox](https://github.com/mothnox) & Rototype 🇩🇪
+- Artists: [Mothnox](https://github.com/mothnox) 
 - Musician: Pierre
 
 ### Game Design Document
