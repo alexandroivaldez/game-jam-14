@@ -5,10 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://2gpfcwh04s7c" path="res://assets/seagull/enemy_seagull_animated(64x64).png" id="4_alxg8"]
 [ext_resource type="PackedScene" uid="uid://doyeg20qdcm1y" path="res://prefabs/enemy_hurtbox.tscn" id="4_m6oqr"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tkd1"]
-radius = 11.0
-height = 54.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_85i7t"]
 atlas = ExtResource("4_alxg8")
 region = Rect2(320, 0, 64, 64)
@@ -71,33 +67,32 @@ animations = [{
 "speed": 16.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tkd1"]
+radius = 11.0
+height = 54.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7eu1"]
-size = Vector2(40, 5)
+size = Vector2(22, 5)
 
 [node name="Seagull" instance=ExtResource("1_ma3j2")]
-collision_layer = 4
 script = ExtResource("2_i4am3")
 enemy_score = 100
 speed = 100.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-visible = false
-position = Vector2(0, -2)
-rotation = -1.5708
-shape = SubResource("CapsuleShape2D_7tkd1")
-
-[node name="AnimatedSprite2D" parent="." index="2"]
+[node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_bnrnm")
 animation = &"hurt"
 autoplay = "idle"
 
-[node name="PlayerDetector" type="RayCast2D" parent="." index="3"]
-target_position = Vector2(0, 200)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -2)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_7tkd1")
 
-[node name="enemy-hurtbox" parent="." index="4" instance=ExtResource("4_m6oqr")]
+[node name="enemy-hurtbox" parent="." index="2" instance=ExtResource("4_m6oqr")]
+collision_layer = 32
 
 [node name="collision" type="CollisionShape2D" parent="enemy-hurtbox" index="0"]
-visible = false
 position = Vector2(0, -12.5)
 shape = SubResource("RectangleShape2D_p7eu1")
 

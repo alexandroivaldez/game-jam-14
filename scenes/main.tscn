@@ -1121,7 +1121,7 @@ position = Vector2(672, 992)
 script = ExtResource("15_2wh1i")
 
 [node name="MainChar" parent="." instance=ExtResource("3_4q162")]
-position = Vector2(121, 144)
+position = Vector2(128, 160)
 collision_mask = 86
 
 [node name="seaTest" parent="." instance=ExtResource("5_8hao6")]
@@ -1131,7 +1131,7 @@ collision_layer = 0
 script = ExtResource("6_m8du1")
 
 [node name="Camera2D" type="Camera2D" parent="seaTest"]
-position = Vector2(0, -678)
+position = Vector2(7, -687)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

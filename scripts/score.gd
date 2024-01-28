@@ -16,10 +16,6 @@ func focus():
 
 func _on_retry_btn_pressed():
 	get_tree().paused = false
-	Globals.coins = 0
-	Globals.score = 0
-	Globals.player_life = 3
-	await get_tree().create_timer(0.25).timeout
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 

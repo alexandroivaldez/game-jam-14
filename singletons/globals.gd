@@ -6,6 +6,6 @@ signal life_updated
 
 var coins := 0
 var score := 0
-var player_life := 3
+var player_life := 20
 
 var player = null

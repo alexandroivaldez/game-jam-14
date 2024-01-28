@@ -5,7 +5,9 @@ const SPEED = 300.0
 
 @onready var animation = $anim
 @onready var ray_left = $ray_left
+@onready var ray_left_2 = $ray_left2
 @onready var ray_right = $ray_right
+@onready var ray_right_2 = $ray_right2
 
 @onready var jumpSound = $jumpSound
 @onready var hurt_sound = $hurtSound
@@ -71,13 +73,15 @@ func _set_state():
 		animation.play(state)
 
 func _on_hurtbox_body_entered(_body):
-	if ray_right.is_colliding():
+	if ray_right.is_colliding() or ray_right_2.is_colliding():
 		take_damage(Vector2(-200, -200))
-	elif ray_left.is_colliding():
+	elif ray_left.is_colliding() or ray_left_2.is_colliding():
 		take_damage(Vector2(200, -200))
+	else:
+		take_damage(Vector2(0, 200))
 
 func _on_hurtbox_area_entered(_area):
-	take_damage(Vector2(0, -400))
+	take_damage(Vector2(200 * (direction * -1), -400))
 
 func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
 	

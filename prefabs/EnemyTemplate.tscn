@@ -3,11 +3,7 @@
 [ext_resource type="Script" path="res://scripts/EnemyTemplate.gd" id="1_ah0u8"]
 
 [node name="EnemyTemplate" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_ah0u8")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-
-[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

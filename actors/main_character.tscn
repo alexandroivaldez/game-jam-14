@@ -148,13 +148,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1805"]
-size = Vector2(37, 43)
+size = Vector2(37, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bfilh"]
-size = Vector2(38, 5)
+size = Vector2(22, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8hqb"]
-size = Vector2(45, 47)
+size = Vector2(40, 45)
 
 [node name="MainChar" type="CharacterBody2D" groups=["player"]]
 collision_mask = 87
@@ -170,7 +170,7 @@ autoplay = "idle"
 frame_progress = 0.0329941
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6.5)
+position = Vector2(0, 7.5)
 shape = SubResource("RectangleShape2D_x1805")
 
 [node name="head_collider" type="Area2D" parent="."]
@@ -178,27 +178,38 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="collider" type="CollisionShape2D" parent="head_collider"]
-position = Vector2(0, -18)
+position = Vector2(0, -20)
 shape = SubResource("RectangleShape2D_bfilh")
 
 [node name="ray_left" type="RayCast2D" parent="."]
-position = Vector2(0, 8)
-scale = Vector2(1, 7)
-target_position = Vector2(-30, 0)
+position = Vector2(0, 7)
+scale = Vector2(2, 2)
+target_position = Vector2(-40, 20)
+collision_mask = 4
+
+[node name="ray_left2" type="RayCast2D" parent="."]
+scale = Vector2(2, 2)
+target_position = Vector2(-40, -20)
 collision_mask = 4
 
 [node name="ray_right" type="RayCast2D" parent="."]
-position = Vector2(0, 8)
-scale = Vector2(1, 7)
-target_position = Vector2(30, 0)
+position = Vector2(0, 7)
+scale = Vector2(2, 2)
+target_position = Vector2(40, 20)
 collision_mask = 4
+
+[node name="ray_right2" type="RayCast2D" parent="."]
+scale = Vector2(2, 2)
+target_position = Vector2(40, -20)
+collision_mask = 4
+hit_from_inside = true
 
 [node name="hurtbox" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
 
 [node name="collider" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(0, 8.5)
+position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_q8hqb")
 debug_color = Color(0.94902, 0.164706, 0.392157, 0.419608)
 
